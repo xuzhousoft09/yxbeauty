@@ -1,0 +1,70 @@
+<div class="wide form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'action'=>Yii::app()->createUrl($this->route),
+	'method'=>'get',
+)); ?>
+
+	<div class="row">
+		<?php echo $form->label($model,'ID'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'姓名'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'记录'); ?>
+		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'顾客ID'); ?>
+		<?php echo $form->textField($model,'project_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'类型ID'); ?>
+		<?php echo $form->textField($model,'type_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'状态ID'); ?>
+		<?php echo $form->textField($model,'status_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'owner_id'); ?>
+		<?php echo $form->textField($model,'负责人ID'); ?>
+	</div>
+
+	
+	<div class="row">
+		<?php echo $form->label($model,'create_time'); ?>
+		<?php echo $form->textField($model,'create_time'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'create_user_id'); ?>
+		<?php echo $form->textField($model,'create_user_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'update_time'); ?>
+		<?php echo $form->textField($model,'update_time'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'update_user_id'); ?>
+		<?php echo $form->textField($model,'update_user_id'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Search'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- search-form -->
