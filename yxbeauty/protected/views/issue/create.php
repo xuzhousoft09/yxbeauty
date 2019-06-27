@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Issues'=>array('index'),
+	
 	'Create',
 );
 
