@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'顾客列表', 'url'=>array('index')),
+
 	array('label'=>'创建顾客', 'url'=>array('create')),
 );
 

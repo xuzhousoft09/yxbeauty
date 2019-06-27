@@ -1,12 +1,11 @@
 <?php
 $this->breadcrumbs=array(
-	'Issues'=>array('index'),
+	
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Issue', 'url'=>array('index')),
-	array('label'=>'Create Issue', 'url'=>array('create')),
+		array('label'=>'创建交易', 'url'=>array('create','pid'=>$model->project->id)),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,7 +22,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Issues</h1>
+<h1>管理交易</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

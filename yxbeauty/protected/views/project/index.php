@@ -4,9 +4,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'顾客列表', 'url'=>array('index')),
+		array('label'=>'创建顾客', 'url'=>array('create'),'visible'=>Yii::app()->user->checkAccess("admin")),
+
 	array('label'=>'管理顾客', 'url'=>array('admin'),'visible'=>Yii::app()->user->checkAccess("admin")),
+		
 );
+
 ?>
 
 <?php if($sysMessage != null):?>

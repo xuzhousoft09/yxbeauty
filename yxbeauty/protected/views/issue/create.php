@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'交易列表', 'url'=>array('issue/index','pid'=>$model->project_id)),
+	/* array('label'=>'交易列表', 'url'=>array('issue/index','pid'=>$model->project_id)), */
 	
 	/* array('label'=>'Manage Issue', 'url'=>array('admin')), */
 );

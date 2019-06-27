@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'交易列表', 'url'=>array('index','pid'=>$model->project->id)),
+/* 	array('label'=>'交易列表', 'url'=>array('index','pid'=>$model->project->id)), */
     /* array('label'=>'Create Issue', 'url'=>array('create','pid'=>$model->project->id)), */
 	/* array('label'=>'Create Issue', 'url'=>array('create')), */
     
@@ -33,11 +33,7 @@ if(Yii::app()->user->checkAccess('createIssue',$params))
 			'url'=>array('create', 'pid'=>$model->project->id));
 }
 
-if(Yii::app()->user->checkAccess('updateIssue',$params))
-{
-	$this->menu[] = array('label'=>'更新交易',
-			'url'=>array('update', 'id'=>$model->id));
-}
+
 /* var_dump(Yii::app()->user->checkAccess('deleteIssue',$params));exit; */
 /* if(Yii::app()->user->checkAccess('deleteIssue',$params))
 {
