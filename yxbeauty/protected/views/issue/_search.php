@@ -37,7 +37,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'owner_id'); ?>
-		<?php echo $form->textField($model,'负责人ID'); ?>
+		<?php echo $form->textField($model,'owner_id'); ?>
 	</div>
 
 	
