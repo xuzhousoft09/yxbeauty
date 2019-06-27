@@ -8,7 +8,7 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('记录')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('描述')); ?>:</b>
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 

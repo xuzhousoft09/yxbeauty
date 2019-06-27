@@ -16,7 +16,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'记录'); ?>
+		<?php echo $form->label($model,'描述'); ?>
 		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
