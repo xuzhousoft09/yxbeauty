@@ -34,6 +34,11 @@ if(Yii::app()->user->checkAccess('createIssue',$params))
 }
 
 
+if(Yii::app()->user->checkAccess('updateIssue',$params))
+{
+	$this->menu[] = array('label'=>'更新交易',
+			'url'=>array('update', 'id'=>$model->id));
+}
 /* var_dump(Yii::app()->user->checkAccess('deleteIssue',$params));exit; */
 /* if(Yii::app()->user->checkAccess('deleteIssue',$params))
 {
