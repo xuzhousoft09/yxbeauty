@@ -92,9 +92,12 @@ class ProjectController extends Controller
 		{
 			throw new CHttpException(403,'You are not authorized to per-form this action');
 		}
+		
+
 		if(isset($_POST['Project']))
 		{
 			$model->attributes=$_POST['Project'];
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

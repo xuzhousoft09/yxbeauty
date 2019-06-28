@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $name
  * @property string $description
+ * @property integer balance
  * @property string $create_time
  * @property integer $create_user_id
  * @property string $update_time
@@ -73,6 +74,7 @@ class Project extends TrackStarActiveRecord
 			'id' => 'ID',
 			'name' => '姓名',
 			'description' => '描述',
+			'balance'=>'余额',
 			'create_time' => '创建时间',
 			'create_user_id' => '创建用户ID',
 			'update_time' => '更新时间',
