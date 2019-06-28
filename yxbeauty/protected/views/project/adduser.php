@@ -9,6 +9,8 @@ $this->menu=array(array('label'=>'回到顾客','url'=>array('view','id'=>$model
 ?>
 
 <h1>添加用户到<?php echo $model->project->name;?></h1>
+
+
 <?php if(Yii::app()->user->hasFlash('success')):?>
 
 <div class="successMessage">
@@ -19,7 +21,6 @@ $this->menu=array(array('label'=>'回到顾客','url'=>array('view','id'=>$model
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm')?>
-
 <p class="note">Fields with<span class="required">*</span> are required.</p>
 <div class="row">
 <?php $this->widget('CAutoComplete',array(
@@ -35,11 +36,11 @@ $this->menu=array(array('label'=>'回到顾客','url'=>array('view','id'=>$model
 </div>
 
 <div class="row">
-<?php echo $form->labelEx($model,'role');?>
+<?php echo $form->labelEx($model,'role'); ?> 
 <?php echo $form->dropDownList($model,'role',Project::getUserRoleOptions());?>
 <?php echo $form->error($model,'role');?>
 </div>
-
+<p>本功能尚未完工，角色暂时随便选一个即可</p>
 <div class="row buttons">
 <?php echo CHtml::submitButton('Add User');?>
 </div>
