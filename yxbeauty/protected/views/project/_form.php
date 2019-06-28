@@ -14,6 +14,11 @@
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
+	<div class="row">
+		<?php echo $form->labelEx($model,'电话'); ?>
+		<?php echo $form->textField($model,'telephone',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'telephone'); ?>
+	</div>
 	
 	
 	<div class="row">

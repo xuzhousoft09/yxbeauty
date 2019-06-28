@@ -16,6 +16,7 @@
 class Project extends TrackStarActiveRecord
 {
 	public $balance;
+	public $telephone;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return Project the static model class
@@ -41,15 +42,15 @@ class Project extends TrackStarActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('balance,create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
+			array('balance,telephone,create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>128),
-			array('description,balance,create_time, update_time', 'safe'),
+			array('description,telephone,balance,create_time, update_time', 'safe'),
 			
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description,balance,create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
+			array('id, name, description,balance,telephone,create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
 		    array('name', 'required'),
-		    array('description', 'required'),
+		    
 		);
 	}
 
@@ -75,6 +76,7 @@ class Project extends TrackStarActiveRecord
 			'id' => 'ID',
 			'name' => '姓名',
 			'description' => '描述',
+			'telephone' => '电话',
 			'balance'=>'余额',
 			'create_time' => '创建时间',
 			'create_user_id' => '创建用户ID',
@@ -97,6 +99,7 @@ class Project extends TrackStarActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('description',$this->description,true);
+		$criteria->compare('telephone',$this->telephone,true);
 		$criteria->compare('balance',$this->balance,true);
 		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('create_user_id',$this->create_user_id);

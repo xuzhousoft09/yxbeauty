@@ -47,6 +47,7 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 	'attributes'=>array(
 		'id',
 		'name',
+		'telephone',
 		'balance',
 		'description',
 		'create_time',

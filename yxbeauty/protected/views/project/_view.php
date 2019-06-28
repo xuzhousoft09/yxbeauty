@@ -7,6 +7,14 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('姓名')); ?>:</b>
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('电话')); ?>:</b>
+	<?php echo CHtml::encode($data->telephone); ?>
+	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('余额')); ?>:</b>
+	<?php echo CHtml::encode($data->balance); ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('描述')); ?>:</b>
 	<?php echo CHtml::encode($data->description); ?>
