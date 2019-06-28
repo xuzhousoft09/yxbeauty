@@ -15,6 +15,7 @@
  */
 class Project extends TrackStarActiveRecord
 {
+	public $balance;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return Project the static model class
