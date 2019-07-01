@@ -1,5 +1,7 @@
 <div class="form">
 
+
+
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'issue-form',
 	'enableAjaxValidation'=>false,
@@ -15,10 +17,13 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
    <div class="row">
-		<?php echo $form->labelEx($model,'消费'); ?>
+		<?php echo $form->labelEx($model,'消费金额'); ?>
 		<?php echo $form->textField($model,'consumption',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'name'); ?>
+		<?php echo $form->error($model,'consumption'); ?>
 	</div>
+        <?php echo $form->labelEx($model,'消费日期'); ?>
+		<?php echo $form->textField($model,'consumption_date',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'consumption_date'); ?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'描述'); ?>
 		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
@@ -54,6 +59,8 @@
 	
   <?php /* var_dump($this->getProject()->getUserOptions());  */ // returned null array?> 
 		<?php echo $form->error($model,'owner_id'); ?>
+		
+	
 	</div>
 
 	<div class="row">

@@ -105,7 +105,7 @@ class IssueController extends Controller
 		{
 			throw new CHttpException(403,'You are not authorized to per-form this action');
 		}
-		
+	   
 		if(isset($_POST['Issue']))
 		{
 			 /* var_dump($_POST['Issue']['type_id']);

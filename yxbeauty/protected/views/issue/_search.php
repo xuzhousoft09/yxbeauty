@@ -14,10 +14,14 @@
 		<?php echo $form->label($model,'姓名'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
+	<div class="row">
+		<?php echo $form->label($model,'消费金额'); ?>
+		<?php echo $form->textField($model,'consumption',array('size'=>60,'maxlength'=>2000)); ?>
+	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'记录'); ?>
-		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
+		<?php echo $form->label($model,'消费日期'); ?>
+		<?php echo $form->textField($model,'consumption_date',array('size'=>60,'maxlength'=>2000)); ?>
 	</div>
 
 	<div class="row">
@@ -36,7 +40,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'owner_id'); ?>
+		<?php echo $form->label($model,'负责人ID'); ?>
 		<?php echo $form->textField($model,'owner_id'); ?>
 	</div>
 
