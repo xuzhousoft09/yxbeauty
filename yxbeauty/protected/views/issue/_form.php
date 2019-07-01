@@ -16,14 +16,26 @@
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
-   <div class="row">
+    <div class="row">
 		<?php echo $form->labelEx($model,'消费金额'); ?>
 		<?php echo $form->textField($model,'consumption',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'consumption'); ?>
 	</div>
-        <?php echo $form->labelEx($model,'消费日期'); ?>
-		<?php echo $form->textField($model,'consumption_date',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'consumption_date'); ?>
+	<?php 
+	$this->widget('zii.widgets.jui.CJuiDatePicker',array(
+			'model'=>$model,
+			'attribute'=>'consumption_date',
+			'value'=>$model->consumption_date,
+			// additional javascript options for the date picker plugin
+			'options'=>array(
+					'showAnim'=>'fold',
+			),
+			'htmlOptions'=>array(
+					'style'=>'height:20px;'
+			),
+	));
+	?>
+     <!-- refer:https://www.hollowdevelopers.com/2011/01/09/cjuidatepicker-cactiveform-yii-framework/ -->
 	<div class="row">
 		<?php echo $form->labelEx($model,'描述'); ?>
 		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>

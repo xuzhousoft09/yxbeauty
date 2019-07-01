@@ -108,11 +108,11 @@ class IssueController extends Controller
 	   
 		if(isset($_POST['Issue']))
 		{
-			 /* var_dump($_POST['Issue']['type_id']);
-			exit;  */
+			 
 			
 			
 			$model->attributes=$_POST['Issue'];
+			
 			if($model->save())
 				
 				$this->redirect(array('view','id'=>$model->id));
