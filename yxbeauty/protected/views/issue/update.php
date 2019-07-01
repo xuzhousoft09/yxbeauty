@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'交易列表', 'url'=>array('index')),
-	array('label'=>'创建交易', 'url'=>array('create')),
+	array('label'=>'创建交易', 'url'=>array('create','id'=>$model->pid)),
 	array('label'=>'查看交易', 'url'=>array('view', 'id'=>$model->id)),
 	/* array('label'=>'Manage Issue', 'url'=>array('admin')), */
 );
