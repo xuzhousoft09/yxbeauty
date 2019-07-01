@@ -62,6 +62,7 @@ if(Yii::app()->user->checkAccess('admin'))
 	'attributes'=>array(
 		'id',
 		'name',
+		'consumption',
 		'description',
 		/* 'project_id', */
 	     array(

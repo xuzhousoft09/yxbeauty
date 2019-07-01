@@ -14,9 +14,13 @@
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
-
+   <div class="row">
+		<?php echo $form->labelEx($model,'消费'); ?>
+		<?php echo $form->textField($model,'consumption',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'name'); ?>
+	</div>
 	<div class="row">
-		<?php echo $form->labelEx($model,'记录'); ?>
+		<?php echo $form->labelEx($model,'描述'); ?>
 		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>

@@ -26,6 +26,7 @@
  */
 class Issue extends TrackStarActiveRecord
 {
+	public $consumption;
     
     const TYPE_BUG=0;
     const TYPE_FEATURE=1;
@@ -84,16 +85,16 @@ class Issue extends TrackStarActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-				array('owner_id', 'required'),
+			array('owner_id', 'required'),
 				
 			/* array('project_id, type_id, status_id, owner_id, requester_id, create_user_id, update_user_id', 'numerical', 'integerOnly'=>true), */
-				array('project_id, type_id, status_id, owner_id,create_user_id', 'numerical', 'integerOnly'=>true),
+			array('project_id,consumption,type_id, status_id, owner_id,create_user_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>256),
 			array('description', 'length', 'max'=>2000),
 			array('create_time, update_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description, project_id, type_id, status_id, owner_id, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
+			array('id, name, description,consumption,project_id, type_id, status_id, owner_id, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -124,6 +125,7 @@ class Issue extends TrackStarActiveRecord
 			'type_id' => '类型',
 			'status_id' => '状态',
 			'owner_id' => '负责人',
+			'consumption'=>'消费',
 	
 			'create_time' => '创建时间',
 			'create_user_id' => '创建用户',
@@ -142,9 +144,10 @@ class Issue extends TrackStarActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-
+        
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
+		$criteria->compare('consumption',$this->consumption,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('project_id',$this->project_id);
 		$criteria->compare('type_id',$this->type_id);

@@ -4,9 +4,11 @@
 	<?php echo CHtml::link(CHtml::encode($data->name), array('issue/view', 'id'=>$data->id)); ?>
 	<br />
 
-	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('消费')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->consumption), array('issue/view', 'id'=>$data->id)); ?>
+	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('记录')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('描述')); ?>:</b>
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
