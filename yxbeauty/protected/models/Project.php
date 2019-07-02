@@ -16,6 +16,7 @@
 class Project extends TrackStarActiveRecord
 {
 	public $balance;
+	public $consumptions;
 	public $telephone;
 	/**
 	 * Returns the static model of the specified AR class.
@@ -75,9 +76,10 @@ class Project extends TrackStarActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => '姓名',
-			'description' => '描述',
+			'description' => '备注',
 			'telephone' => '电话',
-			'balance'=>'余额',
+			'balance'=>'充值总额',
+			'consumptions'=>'消费总额',
 			'create_time' => '创建时间',
 			'create_user_id' => '创建用户ID',
 			'update_time' => '更新时间',
@@ -183,6 +185,13 @@ class Project extends TrackStarActiveRecord
 		$command = Yii::app()->db->createCommand($sql);
 		$command->bindValue(":projectId", $this->id, PDO::PARAM_INT);
 		$command->bindValue(":userId", $user->id, PDO::PARAM_INT);
+		return $command->execute()==1;
+	}
+	public function caculateTheConsumptions($id)
+	{
+		$sql = "select sum(consumption) as consumptions from tbl_issue where project_id = :projectId";
+		$command = Yii::app()->db->createCommand($sql);
+		$command = bindValue(":projectId", $id, PDO::PARAM_INT );
 		return $command->execute()==1;
 	}
 }

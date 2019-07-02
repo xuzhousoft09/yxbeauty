@@ -124,7 +124,7 @@ class Issue extends TrackStarActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => '姓名',
-			'description' => '描述',
+			'description' => '备注',
 			'project_id' => '顾客',
 			'type_id' => '类型',
 			'status_id' => '状态',

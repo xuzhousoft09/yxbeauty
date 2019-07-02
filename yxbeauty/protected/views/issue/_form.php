@@ -42,7 +42,7 @@
 	</div>
      <!-- refer:https://www.hollowdevelopers.com/2011/01/09/cjuidatepicker-cactiveform-yii-framework/ -->
 	<div class="row">
-		<?php echo $form->labelEx($model,'描述'); ?>
+		<?php echo $form->labelEx($model,'备注'); ?>
 		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>2000)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>

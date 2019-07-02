@@ -12,7 +12,7 @@
 	<?php echo CHtml::encode($data->consumption_date); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('描述')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('备注')); ?>:</b>
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 

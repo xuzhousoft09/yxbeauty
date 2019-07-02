@@ -22,13 +22,13 @@
 	
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'余额'); ?>
+		<?php echo $form->labelEx($model,'充值总额'); ?>
 		<?php echo $form->textField($model,'balance',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'balance'); ?>
 	</div>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'描述'); ?>
+		<?php echo $form->labelEx($model,'备注'); ?>
 		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
