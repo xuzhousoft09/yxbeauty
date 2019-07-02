@@ -6,8 +6,9 @@
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
-	
-    	<?php var_dump($model); exit;?>>
+
+	<?php echo $form->errorSummary($model); ?>
+    
 	<div class="row">
 		<?php echo $form->labelEx($model,'姓名'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>128)); ?>
