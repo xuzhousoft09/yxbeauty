@@ -124,8 +124,8 @@ class IssueController extends Controller
 	}
 	public function actionUpdate($id)
 	{
-	
-		$model=$this->loadModel($id);        
+		
+		$model=$this->loadModel($id);
 		$this->loadProject($model->project_id);
 		$model->project_id = $this->_project->id;
 		$project=$this->loadProject($model->project_id);
@@ -134,7 +134,7 @@ class IssueController extends Controller
 		{
 			throw new CHttpException(403,'You are not authorized to per-form this action');
 		}
-		   
+	
 		if(isset($_POST['Issue']))
 		{
 		    
