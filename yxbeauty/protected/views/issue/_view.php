@@ -5,11 +5,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('消费金额')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->consumption), array('issue/view', 'id'=>$data->consumption)); ?>
+	<?php echo CHtml::encode($data->consumption); ?>
 	<br />
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('消费日期')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->consumption_date), array('issue/view', 'id'=>$data->consumption_date)); ?>
+	<?php echo CHtml::encode($data->consumption_date); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('描述')); ?>:</b>
