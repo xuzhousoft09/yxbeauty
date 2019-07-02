@@ -79,7 +79,7 @@ function methodName($event)
 }
 ~~~
 
-这里的 `$event` 即描述事件的参数（它来源于 `raiseEvent()` 调用）。`$event` 参数是 [CEvent] 或其子类的实例。
+这里的 `$event` 即备注事件的参数（它来源于 `raiseEvent()` 调用）。`$event` 参数是 [CEvent] 或其子类的实例。
 至少，它包含了关于谁触发了此事件的信息。
 
 从版本 1.0.10 开始，事件句柄也可以是一个PHP 5.3以后支持的匿名函数。例如，

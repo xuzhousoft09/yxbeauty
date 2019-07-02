@@ -36,7 +36,7 @@
 通过设置 [CDbConnection::schemaCachingDuration] 属性为一个大于 0 的值来完成。
 
 除了这些应用级别的缓存技术，我们也可使用服务级别的缓存方案来提高应用的性能。
-事实上，我们之前描述的 [PHP APC 缓存](/doc/guide/topics.performance#enabling-apc-extension)  就属于此项。 也有其他的服务器技术，例如 [Zend Optimizer](http://www.zend.com/en/products/guard/zend-optimizer), [eAccelerator](http://eaccelerator.net/), [Squid](http://www.squid-cache.org/)，其他不一一列出。
+事实上，我们之前备注的 [PHP APC 缓存](/doc/guide/topics.performance#enabling-apc-extension)  就属于此项。 也有其他的服务器技术，例如 [Zend Optimizer](http://www.zend.com/en/products/guard/zend-optimizer), [eAccelerator](http://eaccelerator.net/), [Squid](http://www.squid-cache.org/)，其他不一一列出。
 
 数据库优化
 ---------------------
@@ -60,7 +60,7 @@
 
 对于一个 Yii 产生的页面，例外是一些由组件渲染的脚本文件我们不想要更改 (例如 Yii core 组件，第三方组件)。 为了最小化这些脚本文件，我们需要两个步骤。
 
-> Note: 下面描述的 `scriptMap` 特征已自版本 1.0.3 起被支持。
+> Note: 下面备注的 `scriptMap` 特征已自版本 1.0.3 起被支持。
 
 首先，通过配置应用组件 [clientScript|CWebApplication::clientScript] 的 [scriptMap|CClientScript::scriptMap] 属性来声明脚本被最小化。 可以在应用配置中完成，也可以在代码中配置。例如，
 

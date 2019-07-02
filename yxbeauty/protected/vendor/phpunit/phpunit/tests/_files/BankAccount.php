@@ -20,33 +20,33 @@ class BankAccountException extends RuntimeException
 class BankAccount
 {
     /**
-     * The bank account's balance.
+     * The bank account's deposit.
      *
      * @var float
      */
-    protected $balance = 0;
+    protected $deposit = 0;
 
     /**
-     * Returns the bank account's balance.
+     * Returns the bank account's deposit.
      *
      * @return float
      */
     public function getBalance()
     {
-        return $this->balance;
+        return $this->deposit;
     }
 
     /**
-     * Sets the bank account's balance.
+     * Sets the bank account's deposit.
      *
-     * @param float $balance
+     * @param float $deposit
      *
      * @throws BankAccountException
      */
-    protected function setBalance($balance)
+    protected function setBalance($deposit)
     {
-        if ($balance >= 0) {
-            $this->balance = $balance;
+        if ($deposit >= 0) {
+            $this->deposit = $deposit;
         } else {
             throw new BankAccountException;
         }
@@ -55,13 +55,13 @@ class BankAccount
     /**
      * Deposits an amount of money to the bank account.
      *
-     * @param float $balance
+     * @param float $deposit
      *
      * @throws BankAccountException
      */
-    public function depositMoney($balance)
+    public function depositMoney($deposit)
     {
-        $this->setBalance($this->getBalance() + $balance);
+        $this->setBalance($this->getBalance() + $deposit);
 
         return $this->getBalance();
     }
@@ -69,13 +69,13 @@ class BankAccount
     /**
      * Withdraws an amount of money from the bank account.
      *
-     * @param float $balance
+     * @param float $deposit
      *
      * @throws BankAccountException
      */
-    public function withdrawMoney($balance)
+    public function withdrawMoney($deposit)
     {
-        $this->setBalance($this->getBalance() - $balance);
+        $this->setBalance($this->getBalance() - $deposit);
 
         return $this->getBalance();
     }

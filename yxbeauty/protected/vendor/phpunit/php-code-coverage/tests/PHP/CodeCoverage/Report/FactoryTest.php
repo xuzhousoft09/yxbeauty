@@ -72,7 +72,7 @@ class PHP_CodeCoverage_Report_FactoryTest extends PHP_CodeCoverage_TestCase
                             'methodName'      => 'getBalance'
                         ),
                         'setBalance' => array(
-                            'signature'       => 'setBalance($balance)',
+                            'signature'       => 'setBalance($deposit)',
                             'startLine'       => 11,
                             'endLine'         => 18,
                             'executableLines' => 5,
@@ -84,7 +84,7 @@ class PHP_CodeCoverage_Report_FactoryTest extends PHP_CodeCoverage_TestCase
                             'methodName'      => 'setBalance'
                         ),
                         'depositMoney' => array(
-                            'signature'       => 'depositMoney($balance)',
+                            'signature'       => 'depositMoney($deposit)',
                             'startLine'       => 20,
                             'endLine'         => 25,
                             'executableLines' => 2,
@@ -96,7 +96,7 @@ class PHP_CodeCoverage_Report_FactoryTest extends PHP_CodeCoverage_TestCase
                             'methodName'      => 'depositMoney'
                         ),
                         'withdrawMoney' => array(
-                            'signature'       => 'withdrawMoney($balance)',
+                            'signature'       => 'withdrawMoney($deposit)',
                             'startLine'       => 27,
                             'endLine'         => 32,
                             'executableLines' => 2,

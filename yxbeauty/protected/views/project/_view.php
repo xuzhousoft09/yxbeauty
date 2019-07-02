@@ -13,7 +13,7 @@
 	<br />
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('充值总额')); ?>:</b>
-	<?php echo CHtml::encode($data->balance); ?>
+	<?php echo CHtml::encode($data->deposit); ?>
 	<br />
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('消费总额')); ?>:</b>

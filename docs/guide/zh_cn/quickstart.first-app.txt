@@ -38,7 +38,7 @@ http://hostname/testdrive/index.php
 ![登录页](first-app5.png)
 
 
-下面的树图描述了我们这个应用的目录结构。请查看[约定](/doc/guide/basics.convention#directory)以获取该结构的详细解释。
+下面的树图备注了我们这个应用的目录结构。请查看[约定](/doc/guide/basics.convention#directory)以获取该结构的详细解释。
 
 ~~~
 testdrive/
@@ -162,7 +162,7 @@ return array(
 
 ![Model Generator](gii-model.png)
 
-在 `Table Name` 输入框中，输入 `tbl_user`。在 `Model Class` 输入框中，输入 `User`。然后点击 `Preview` 按钮。这里将展示将要生成的新文件。现在点击 `Generate` 按钮。一个名为 `User.php`  将生成到 `protected/models` 目录中。如我们稍后描述的， `User` 模型类允许我们以面向对象的方式来访问数据表 `tbl_user` 。
+在 `Table Name` 输入框中，输入 `tbl_user`。在 `Model Class` 输入框中，输入 `User`。然后点击 `Preview` 按钮。这里将展示将要生成的新文件。现在点击 `Generate` 按钮。一个名为 `User.php`  将生成到 `protected/models` 目录中。如我们稍后备注的， `User` 模型类允许我们以面向对象的方式来访问数据表 `tbl_user` 。
 
 ### 生成 CRUD 代码
 

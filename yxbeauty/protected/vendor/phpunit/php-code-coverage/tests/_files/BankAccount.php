@@ -1,32 +1,32 @@
 <?php
 class BankAccount
 {
-    protected $balance = 0;
+    protected $deposit = 0;
 
     public function getBalance()
     {
-        return $this->balance;
+        return $this->deposit;
     }
 
-    protected function setBalance($balance)
+    protected function setBalance($deposit)
     {
-        if ($balance >= 0) {
-            $this->balance = $balance;
+        if ($deposit >= 0) {
+            $this->deposit = $deposit;
         } else {
             throw new RuntimeException;
         }
     }
 
-    public function depositMoney($balance)
+    public function depositMoney($deposit)
     {
-        $this->setBalance($this->getBalance() + $balance);
+        $this->setBalance($this->getBalance() + $deposit);
 
         return $this->getBalance();
     }
 
-    public function withdrawMoney($balance)
+    public function withdrawMoney($deposit)
     {
-        $this->setBalance($this->getBalance() - $balance);
+        $this->setBalance($this->getBalance() - $deposit);
 
         return $this->getBalance();
     }

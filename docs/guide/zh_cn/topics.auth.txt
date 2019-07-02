@@ -221,7 +221,7 @@ class PostController extends CController
 	   - `@`: 验证通过的用户。
 
    - [roles|CAccessRule::roles]: 设定哪个角色匹配此规则。
-这里用到了将在后面描述的[role-based access control](#role-based-access-control)技术。In particular, the rule is applied if [CWebUser::checkAccess] returns true for one of the roles.提示，用户角色应该被设置成`allow`规则，因为角色代表能做某些事情。
+这里用到了将在后面备注的[role-based access control](#role-based-access-control)技术。In particular, the rule is applied if [CWebUser::checkAccess] returns true for one of the roles.提示，用户角色应该被设置成`allow`规则，因为角色代表能做某些事情。
 
    - [ips|CAccessRule::ips]: 设定哪个客户端IP匹配此规则。
 
@@ -266,7 +266,7 @@ Yii::app()->request->redirect(Yii::app()->user->returnUrl);
 基于角色的访问控制（ RBAC的）提供了一种简单而强大
 集中访问控制。请参阅[维基文章] （http://en.wikipedia.org/wiki/Role-based_access_control）了解更多详细的RBAC与其他较传统的访问控制模式的比较。
 
-Yii实现通过其[authManager|CWebApplication::authManager] 应用程序组件分级RBAC的模式。在下面，我们首先介绍用于这模式的主要概念;我们然后描述了如何设定授权数据;最后，我们看看如何利用授权数据，以进行访问检查。
+Yii实现通过其[authManager|CWebApplication::authManager] 应用程序组件分级RBAC的模式。在下面，我们首先介绍用于这模式的主要概念;我们然后备注了如何设定授权数据;最后，我们看看如何利用授权数据，以进行访问检查。
 
 ### 概览（Overview）
 
@@ -424,7 +424,7 @@ if(Yii::app()->user->checkAccess('updateOwnPost',$params))
 
 很多Web应用需要一些很特殊的角色，它们通常需要被分配给几乎每一个用户。例如，我们可能需要为所有注册用户分配一些特殊的权力。假如要象上述方法那样去为每一个用户分配这种角色，我们在维护上将面临很多麻烦。因此，我们采用*缺省角色*功能来解决这个问题。
 
-所谓缺省角色指的是被隐式分配给每一个用户（包括注册和非注册的用户）的角色。它们无需象前面所描述的那样去被分配给用户。当我们调用[CWebUser::checkAccess]，缺省角色将首先被检查，就像它们已经被分配给当前用户一样。
+所谓缺省角色指的是被隐式分配给每一个用户（包括注册和非注册的用户）的角色。它们无需象前面所备注的那样去被分配给用户。当我们调用[CWebUser::checkAccess]，缺省角色将首先被检查，就像它们已经被分配给当前用户一样。
 
 缺省角色必须通过[CAuthManager::defaultRoles]属性进行声明。例如，下面的应用配置声明了两个缺省角色：`authenticated`和`guest`。
 

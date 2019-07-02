@@ -84,4 +84,4 @@ class Portlet extends CWidget
 </html>   
 ~~~
 
-当然可以自己定义视图布局文件，我们同时需要 `/wwwroot/blog/css/main.css` 来作为CSS文件，它能改变我们的博客系统外观。我们不打算在这里详细描述。
+当然可以自己定义视图布局文件，我们同时需要 `/wwwroot/blog/css/main.css` 来作为CSS文件，它能改变我们的博客系统外观。我们不打算在这里详细备注。

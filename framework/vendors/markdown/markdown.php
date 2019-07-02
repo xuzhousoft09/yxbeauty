@@ -18,7 +18,7 @@
 
 class Markdown_Parser {
 
-	# Regex to match balanced [brackets].
+	# Regex to match depositd [brackets].
 	# Needed to insert a maximum bracked depth while converting to PHP.
 	public $nested_brackets_depth = 6;
 	public $nested_brackets_re;

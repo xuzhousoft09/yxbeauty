@@ -27,7 +27,7 @@ pre {font-family:"Lucida Console";font-size:10pt;}
 <body>
 <h1><?php echo $data['type']; ?></h1>
 
-<h3>描述</h3>
+<h3>备注</h3>
 <p class="message">
 <?php echo nl2br(CHtml::encode($data['message'])); ?>
 </p>

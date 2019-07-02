@@ -23,8 +23,8 @@
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'充值总额'); ?>
-		<?php echo $form->textField($model,'balance',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'balance'); ?>
+		<?php echo $form->textField($model,'deposit',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'deposit'); ?>
 	</div>
 	
 	<div class="row">

@@ -9,7 +9,7 @@ Creating Extensions（创建扩展）
 *扩展应该提供详细的安装和API文档。这将减少其他开发员使用扩展时花费的时间和精力。
 *扩展应该用适当的许可。如果您想您的扩展能在开源和闭源项目中使用，你可以考虑使用许可证，如BSD的，麻省理工学院等，但不是GPL的，因为它要求其衍生的代码是开源的。
 
-在下面，我们根据 [overview](/doc/guide/extension.overview)中所描述的分类，描述如何创建一个新的扩展。当您要创建一个主要用于在您自己项目的component部件，这些描述也适用。
+在下面，我们根据 [overview](/doc/guide/extension.overview)中所备注的分类，备注如何创建一个新的扩展。当您要创建一个主要用于在您自己项目的component部件，这些备注也适用。
 
 Application Component（应用部件）
 ---------------------

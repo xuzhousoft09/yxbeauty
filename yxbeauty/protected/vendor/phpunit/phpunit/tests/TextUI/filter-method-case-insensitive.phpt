@@ -1,10 +1,10 @@
 --TEST--
-phpunit --filter /balanceIsInitiallyZero/i BankAccountTest ../_files/BankAccountTest.php
+phpunit --filter /depositIsInitiallyZero/i BankAccountTest ../_files/BankAccountTest.php
 --FILE--
 <?php
 $_SERVER['argv'][1] = '--no-configuration';
 $_SERVER['argv'][2] = '--filter';
-$_SERVER['argv'][3] = '/balanceIsInitiallyZero/i';
+$_SERVER['argv'][3] = '/depositIsInitiallyZero/i';
 $_SERVER['argv'][4] = 'BankAccountTest';
 $_SERVER['argv'][5] = dirname(__FILE__) . '/../_files/BankAccountTest.php';
 

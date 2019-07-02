@@ -12,7 +12,7 @@
 所有文件的基目录.
 
 不同的扩展有着不同的导入,配置,使用要求.以下是我们通常会用到扩展的场景,按照他们在
- [概述](/doc/guide/extension.overview) 中的描述分类.
+ [概述](/doc/guide/extension.overview) 中的备注分类.
 
 
 Zii Extensions

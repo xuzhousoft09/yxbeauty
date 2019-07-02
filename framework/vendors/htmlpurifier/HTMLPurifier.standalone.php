@@ -14617,7 +14617,7 @@ class HTMLPurifier_Strategy_FixNesting extends HTMLPurifier_Strategy
 
 
 /**
- * Takes tokens makes them well-formed (balance end tags, etc.)
+ * Takes tokens makes them well-formed (deposit end tags, etc.)
  */
 class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
 {

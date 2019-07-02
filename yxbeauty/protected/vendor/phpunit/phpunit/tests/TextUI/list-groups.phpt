@@ -14,6 +14,6 @@ PHPUnit_TextUI_Command::main();
 PHPUnit %s by Sebastian Bergmann and contributors.
 
 Available test group(s):
- - balanceCannotBecomeNegative
- - balanceIsInitiallyZero
+ - depositCannotBecomeNegative
+ - depositIsInitiallyZero
  - specification

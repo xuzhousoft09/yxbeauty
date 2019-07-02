@@ -343,7 +343,7 @@ Post::model()->updateCounters($counters,$condition,$params);
 ~~~
 
 在上面的代码中， `$attributes` 是一个含有以 列名作索引的列值的数组；
-`$counters` 是一个由列名索引的可增加的值的数组；`$condition` 和 `$params` 在前面的段落中已有描述。
+`$counters` 是一个由列名索引的可增加的值的数组；`$condition` 和 `$params` 在前面的段落中已有备注。
 
 删除记录
 ---------------

@@ -71,7 +71,7 @@ deny from all
 应用的工作流程
 --------------------
 
-为了帮你理解Yii是怎样工作的，对于我们的程序骨架，当有人访问它的联系页（Contact）时，我们对它的工作流程描述如下：
+为了帮你理解Yii是怎样工作的，对于我们的程序骨架，当有人访问它的联系页（Contact）时，我们对它的工作流程备注如下：
 
  0. 用户请求此 URL `http://www.example.com/blog/index.php?r=site/contact`；
  1. [入口脚本](http://www.yiiframework.com/doc/guide/basics.entry) 被网站服务器执行以处理此请求；

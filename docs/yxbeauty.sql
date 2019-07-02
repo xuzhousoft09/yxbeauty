@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2019 at 07:08 AM
+-- Generation Time: Jul 02, 2019 at 09:59 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -123,6 +123,7 @@ INSERT INTO `authitemchild` (`parent`, `child`) VALUES
 CREATE TABLE `tbl_issue` (
   `id` int(11) NOT NULL,
   `name` varchar(256) CHARACTER SET utf8 NOT NULL,
+  `consumption_date` varchar(255) DEFAULT NULL,
   `description` varchar(2000) CHARACTER SET utf8 DEFAULT NULL,
   `consumption` int(255) DEFAULT NULL,
   `project_id` int(11) DEFAULT NULL,
@@ -140,21 +141,33 @@ CREATE TABLE `tbl_issue` (
 -- Dumping data for table `tbl_issue`
 --
 
-INSERT INTO `tbl_issue` (`id`, `name`, `description`, `consumption`, `project_id`, `type_id`, `status_id`, `owner_id`, `requester_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES
-(8, 'issue belong to project3', 'issue belong to project3', NULL, NULL, 0, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00', NULL),
-(9, 'issue belong to project3', '', NULL, NULL, 0, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, '0000-00-00 00:00:00', NULL),
-(15, 'issue belong to project1', '1234', 1, 1, 0, 4, 5, 1, NULL, NULL, '2019-07-01 14:59:21', 12),
-(16, 'test issue belong to project1', '', NULL, 1, 0, 4, 1, 1, NULL, NULL, '2018-12-09 23:01:19', 0),
-(18, 'test issue belong to project1', '', NULL, 1, 0, 5, 1, 1, NULL, NULL, NULL, NULL),
-(19, 'test issue belong to project1', 'test', NULL, 1, 0, 3, 1, 1, '2018-12-16 12:05:11', 5, '2018-12-16 12:06:08', 5),
-(20, '测试交易for客户2', 'Test', NULL, 2, 0, 3, 5, NULL, '2019-04-24 15:34:05', 12, '2019-04-24 15:36:46', 12),
-(21, '交易', '111', NULL, 1, 0, 3, 1, 1, '2019-06-26 16:26:15', 12, '2019-06-26 16:26:15', 12),
-(22, '耿天天', '', NULL, 1, 0, 3, 1, NULL, '2019-06-26 16:37:14', 12, '2019-06-26 16:37:14', 12),
-(23, '1', '1', NULL, 1, 0, 3, 5, NULL, '2019-06-27 14:41:31', 12, '2019-06-27 14:41:31', 12),
-(24, '测试2', '111', NULL, 1, 0, 3, 1, NULL, '2019-06-27 14:48:40', 12, '2019-06-27 14:48:40', 12),
-(26, '小甜甜', '1', NULL, 1, 0, 3, 7, NULL, '2019-06-27 15:06:52', 12, '2019-06-27 15:06:52', 12),
-(27, '测试2', '1', NULL, 1, 0, 3, 1, NULL, '2019-06-27 15:46:29', 12, '2019-06-27 15:46:29', 12),
-(28, 'consumption', '111', 1, 1, 0, 3, 1, NULL, '2019-07-01 14:55:19', 12, '2019-07-01 14:55:19', 12);
+INSERT INTO `tbl_issue` (`id`, `name`, `consumption_date`, `description`, `consumption`, `project_id`, `type_id`, `status_id`, `owner_id`, `requester_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES
+(15, 'issue belong to project1', '2019-07-05', '1234', 1, 1, 0, 4, 5, 1, NULL, NULL, '2019-07-02 16:43:09', 12),
+(16, 'test issue belong to project1', NULL, '', NULL, 1, 0, 4, 1, 1, NULL, NULL, '2018-12-09 23:01:19', 0),
+(18, 'test issue belong to project1', NULL, '', NULL, 1, 0, 5, 1, 1, NULL, NULL, NULL, NULL),
+(19, 'test issue belong to project1', NULL, 'test', NULL, 1, 0, 3, 1, 1, '2018-12-16 12:05:11', 5, '2018-12-16 12:06:08', 5),
+(20, '测试交易for客户2', NULL, 'Test', 1, 2, 0, 3, 5, NULL, '2019-04-24 15:34:05', 12, '2019-07-01 17:35:17', 12),
+(21, '交易', NULL, '111', NULL, 1, 0, 3, 1, 1, '2019-06-26 16:26:15', 12, '2019-06-26 16:26:15', 12),
+(22, '耿天天', NULL, '', NULL, 1, 0, 3, 1, NULL, '2019-06-26 16:37:14', 12, '2019-06-26 16:37:14', 12),
+(23, '1', NULL, '1', NULL, 1, 0, 3, 5, NULL, '2019-06-27 14:41:31', 12, '2019-06-27 14:41:31', 12),
+(24, '测试2', NULL, '111', NULL, 1, 0, 3, 1, NULL, '2019-06-27 14:48:40', 12, '2019-06-27 14:48:40', 12),
+(26, '小甜甜', NULL, '1', NULL, 1, 0, 3, 7, NULL, '2019-06-27 15:06:52', 12, '2019-06-27 15:06:52', 12),
+(27, '测试2', NULL, '1', NULL, 1, 0, 3, 1, NULL, '2019-06-27 15:46:29', 12, '2019-06-27 15:46:29', 12),
+(28, 'consumption', NULL, '111', 1, 1, 0, 3, 1, NULL, '2019-07-01 14:55:19', 12, '2019-07-01 14:55:19', 12),
+(29, '1', NULL, '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 15:36:56', 12, '2019-07-01 15:51:23', 12),
+(30, '1', NULL, '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 15:52:25', 12, '2019-07-01 16:07:58', 12),
+(31, '测试2', NULL, '111', 1, 1, 0, 3, 1, NULL, '2019-07-01 16:08:24', 12, '2019-07-01 16:29:21', 12),
+(32, 'test issue belong to project1', '2019-07-01', 'テスト', 1, 1, 0, 3, 1, NULL, '2019-07-01 16:30:45', 12, '2019-07-01 17:33:55', 12),
+(34, '1', '2019-07-05', '1', 2, 2, 0, 3, 5, NULL, '2019-07-01 17:36:06', 12, '2019-07-02 15:02:08', 12),
+(35, '1', NULL, '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 17:42:53', 12, '2019-07-01 17:42:53', 12),
+(36, 'test issue belong to project1', '1', '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 17:55:21', 12, '2019-07-01 17:55:21', 12),
+(37, '1', NULL, '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 18:05:58', 12, '2019-07-01 18:06:19', 12),
+(38, '1', '2', '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 18:17:19', 12, '2019-07-01 18:17:26', 12),
+(39, '1', '2019/07/02', '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 18:21:50', 12, '2019-07-01 18:22:51', 12),
+(40, '1', '07/05/2019', '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 18:36:20', 12, '2019-07-01 18:36:20', 12),
+(41, '11', '07/02/2019', '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 18:36:43', 12, '2019-07-01 18:37:20', 12),
+(42, '111', '07/22/2019', '', 2, 1, 0, 3, 1, NULL, '2019-07-01 18:41:33', 12, '2019-07-01 18:41:33', 12),
+(43, '1111111111', '2019-07-05', '111111', 111111111, 1, 0, 3, 1, NULL, '2019-07-01 18:46:43', 12, '2019-07-01 18:46:43', 12);
 
 -- --------------------------------------------------------
 
@@ -166,7 +179,7 @@ CREATE TABLE `tbl_project` (
   `id` int(11) NOT NULL,
   `name` varchar(128) CHARACTER SET utf8 DEFAULT NULL,
   `telephone` int(255) NOT NULL,
-  `balance` int(255) NOT NULL,
+  `deposit` int(255) NOT NULL,
   `description` text CHARACTER SET utf8,
   `create_time` datetime DEFAULT NULL,
   `create_user_id` int(11) DEFAULT NULL,
@@ -178,12 +191,13 @@ CREATE TABLE `tbl_project` (
 -- Dumping data for table `tbl_project`
 --
 
-INSERT INTO `tbl_project` (`id`, `name`, `telephone`, `balance`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES
-(1, '饼子脸', 0, 0, '测试', NULL, NULL, '2019-06-27 15:07:23', 12),
+INSERT INTO `tbl_project` (`id`, `name`, `telephone`, `deposit`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES
+(1, '饼子脸', 0, 1, '测试', NULL, NULL, '2019-07-02 17:57:46', 12),
 (2, 'Test Project15', 1111, 1, '测试', '2018-12-16 13:56:34', 5, '2019-06-28 17:56:13', 12),
 (3, '天天华盛顿', 0, 0, '天天华盛顿', '2019-06-27 15:42:56', 12, '2019-06-27 15:42:56', 12),
 (4, 'Test Project15', 0, 0, '1', '2019-06-28 17:07:39', 12, '2019-06-28 17:07:39', 12),
-(5, 'Test Project15', 0, 0, '1', '2019-06-28 17:11:20', 12, '2019-06-28 17:11:20', 12);
+(5, 'Test Project15', 0, 0, '1', '2019-06-28 17:11:20', 12, '2019-06-28 17:11:20', 12),
+(6, '1', 1, 1, '1', '2019-07-01 16:43:16', 12, '2019-07-01 16:43:16', 12);
 
 -- --------------------------------------------------------
 
@@ -292,7 +306,7 @@ INSERT INTO `tbl_user` (`id`, `email`, `username`, `password`, `last_login_time`
 (9, '123@1238.com', 'Test_for_project1', 'e10adc3949ba59abbe56e057f20f883e', NULL, '2018-12-13 15:15:03', 1, '2018-12-13 15:15:03', 1),
 (10, '123@12388888.com', '1010', '1e48c4420b7073bc11916c6c1de226bb', '2018-12-13 16:02:02', '2018-12-13 16:00:54', 1, '2018-12-13 16:00:54', 1),
 (11, '7777@1288888888883.com', 'project1_owner', '628efa8405a560c875b75f35058c49ba', '2018-12-13 17:31:58', '2018-12-13 16:16:37', 1, '2018-12-13 16:16:37', 1),
-(12, '123@823.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2019-07-01 14:32:21', '2018-12-14 00:17:47', 1, '2018-12-14 00:17:47', 1),
+(12, '123@823.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2019-07-02 11:34:18', '2018-12-14 00:17:47', 1, '2018-12-14 00:17:47', 1),
 (13, '13@123.com', 'aaa', '47bce5c74f589f4867dbd57e9ca9f808', NULL, '2019-06-27 16:10:08', 12, '2019-06-27 16:10:08', 12);
 
 --
@@ -368,12 +382,12 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_issue`
 --
 ALTER TABLE `tbl_issue`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `tbl_project`
 --
 ALTER TABLE `tbl_project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_sys_message`
 --

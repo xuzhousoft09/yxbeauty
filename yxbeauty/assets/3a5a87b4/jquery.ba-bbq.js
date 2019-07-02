@@ -386,7 +386,7 @@
         keys_last = keys.length - 1;
 
       // If the first keys part contains [ and the last ends with ], then []
-      // are correctly balanced.
+      // are correctly depositd.
       if ( /\[/.test( keys[0] ) && /\]$/.test( keys[ keys_last ] ) ) {
         // Remove the trailing ] from the last keys part.
         keys[ keys_last ] = keys[ keys_last ].replace( /\]$/, '' );
