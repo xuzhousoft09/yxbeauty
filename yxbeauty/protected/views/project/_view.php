@@ -17,7 +17,12 @@
 	<br />
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('消费总额')); ?>:</b>
+   <?php echo CHtml::encode($data->consumptions); ?>
 
+    <br />
+    
+    <b><?php echo CHtml::encode($data->getAttributeLabel('余额')); ?>:</b>
+   <?php echo CHtml::encode($data->balance); ?>
     <br />
     
 	<b><?php echo CHtml::encode($data->getAttributeLabel('备注')); ?>:</b>
