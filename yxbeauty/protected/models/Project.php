@@ -190,10 +190,10 @@ class Project extends TrackStarActiveRecord
 		return $command->execute()==1;
 	}
 	public function caculateTheConsumptions($id)
-	{
-		$sql = "select sum(consumption) as consumptions from tbl_issue where project_id = :projectId";
+	{   	
+		$sql = "select sum(consumption) from tbl_issue where project_id= $id";
 		$command = Yii::app()->db->createCommand($sql);
-		$command = bindValue(":projectId", $id, PDO::PARAM_INT );
-		return $command->execute()==1;
+		$result = $command->queryAll();
+	    return $result;
 	}
 }

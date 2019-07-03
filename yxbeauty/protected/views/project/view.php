@@ -41,7 +41,6 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 ?>
 
 <h1>顾客</h1>
-
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(

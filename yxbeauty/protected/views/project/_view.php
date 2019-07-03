@@ -18,6 +18,8 @@
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('消费总额')); ?>:</b>
    <?php echo CHtml::encode($data->consumptions); ?>
+   <?php foreach($data->caculateTheConsumptions($data->id)[0] as $a)
+   	     echo $a;?>
 
     <br />
     
