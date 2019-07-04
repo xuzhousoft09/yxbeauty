@@ -193,7 +193,7 @@ class Project extends TrackStarActiveRecord
 	{   	
 		$sql = "select sum(consumption) from tbl_issue where project_id= $id";
 		$command = Yii::app()->db->createCommand($sql);
-		$result = $command->queryAll();
-	    return $result;
+		$consumptions = $command->queryAll();
+	    return $consumptions;
 	}
 }

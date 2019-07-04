@@ -17,10 +17,8 @@
 	<br />
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('消费总额')); ?>:</b>
-   <?php echo CHtml::encode($data->consumptions); ?>
-   <?php foreach($data->caculateTheConsumptions($data->id)[0] as $c)
+    <?php foreach($data->caculateTheConsumptions($data->id)[0] as $c)
    	     echo $c;?>
-
     <br />
     
     <b><?php echo CHtml::encode($data->getAttributeLabel('余额')); ?>:</b>

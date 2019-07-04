@@ -12,13 +12,7 @@ $this->menu=array(
 	/* array('label'=>'Manage Project', 'url'=>array('admin')),  */
 		
     array('label'=>'创建交易', 'url'=>array('issue/create','pid'=>$model->id)),
-
-		array('label'=>'管理交易', 'url'=>array('issue/admin','pid'=>$model->id)),
-		
-	
-		
-		
-		
+    array('label'=>'管理交易', 'url'=>array('issue/admin','pid'=>$model->id)),
 );
 
 
@@ -32,7 +26,7 @@ if(Yii::app()->user->checkAccess('updateProject',array('project'=>$model)))
 if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 {
 	$this->menu[] = array('label'=>'分配用户到顾客',
-			'url'=>array('adduser', 'id'=>$model->id));
+	'url'=>array('adduser', 'id'=>$model->id));
 }
 
 
@@ -41,30 +35,36 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 ?>
 
 <h1>顾客</h1>
+<?php foreach($model->caculateTheConsumptions($model->id)[0] as $c)?>
+<?php $d = $model->deposit; $b = $d - $c;?>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
 		'name',
 		'telephone',
-		'deposit',
-		'consumptions',
-		'balance',
+		'deposit',	
+			array(
+					'name'=>'消费总额',
+					'value'=>CHtml::encode($c),
+					'type'=>'raw',
+			),
+			array(
+					'name'=>'余额',
+					'value'=>CHtml::encode($b),
+					'type'=>'raw',
+			),
 		'description',
 		'create_time',
 		'create_user_id',
 		'update_time',
 		'update_user_id',
 	),
-)); ?>
-    
-    
-	<?php /* echo CHtml::link('Add User To Project',array('adduser','id'=>$model->id)); */ ?>
 	
-	<?php /* var_dump($model); */ ?>
-	<br/>
-
+		
+)); ?>
 <br>
+
 <h1>顾客交易</h1>
 <?php $this->widget('zii.widgets.CListView', array(
 'dataProvider'=>$issueDataProvider,
