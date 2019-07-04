@@ -18,13 +18,15 @@
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('消费总额')); ?>:</b>
    <?php echo CHtml::encode($data->consumptions); ?>
-   <?php foreach($data->caculateTheConsumptions($data->id)[0] as $a)
-   	     echo $a;?>
+   <?php foreach($data->caculateTheConsumptions($data->id)[0] as $c)
+   	     echo $c;?>
 
     <br />
     
     <b><?php echo CHtml::encode($data->getAttributeLabel('余额')); ?>:</b>
-   <?php echo CHtml::encode($data->balance); ?>
+    <?php $d = $data->deposit; 
+          $b = $d - $c;
+          echo $b;?>
     <br />
     
 	<b><?php echo CHtml::encode($data->getAttributeLabel('备注')); ?>:</b>
