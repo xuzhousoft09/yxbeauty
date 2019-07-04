@@ -49,10 +49,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'project_id',
 		'type_id',
 		'status_id',
-		
-		
 		'owner_id',
-		
 		array(
 			'class'=>'CButtonColumn',
 		),
