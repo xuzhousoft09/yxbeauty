@@ -1,8 +1,8 @@
 <?php
 $this->breadcrumbs=array(
-		
-		'Create',
-);
+		'projects'=>array('project/index'),
+		/* 'Issues'=>array('index'), */
+		);
 
 $this->menu=array(
 	/* array('label'=>'顾客列表', 'url'=>array('index')), */

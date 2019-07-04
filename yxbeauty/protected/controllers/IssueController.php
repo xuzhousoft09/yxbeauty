@@ -124,7 +124,6 @@ class IssueController extends Controller
 	}
 	public function actionUpdate($id)
 	{
-		
 		$model=$this->loadModel($id);
 		$this->loadProject($model->project_id);
 		$model->project_id = $this->_project->id;

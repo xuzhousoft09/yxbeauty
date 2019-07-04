@@ -272,7 +272,7 @@ Yii实现通过其[authManager|CWebApplication::authManager] 应用程序组件�
 
 在Yii的RBAC的一个基本概念是*authorization item*（授权项目）。一个授权项目是一个做某事的许可（如创造新的博客发布，管理用户）。根据其粒度和targeted audience， 授权项目可分为*operations*（行动）,*tasks*（任务）和 *roles*（角色）。角色包括任务，任务包括行动，行动是许可是个原子。 例如，我们就可以有一个`administrator`角色，包括`post management`和`user management`任务。`user management` 任务可能包括`create user`，`update user`和`delete user`行动。为了更灵活，Yii也可以允许角色包括其他角色和动作，任务包括其他任务，行动包括其他行动。
 
-授权项目通过名称唯一确定。
+授权项目通过业务名称唯一确定。
 
 授权项目可能与*business rule*（业务规则）关联。业务规则是一块PHP代码，将在检查访问此项的相关时被执行。只有当执行返回true，用户将被视为有权限此项所代表的许可。举例来说，当定义一项行动`updatePost`，我们想添加业务规则来检查，用户ID是否和帖子作者ID一样，以便只有作者自己能够有权限更新发布。
 

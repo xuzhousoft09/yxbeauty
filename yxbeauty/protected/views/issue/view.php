@@ -26,12 +26,12 @@ $project=$this->loadProject($model->project_id);
 /* var_dump($project); exit; */
 $params=array('project'=>$project);
 /* var_dump($model); exit;  //retruned fals */ 
-if(Yii::app()->user->checkAccess('createIssue',$params))
+/* if(Yii::app()->user->checkAccess('createIssue',$params))
 
 {
 	$this->menu[] = array('label'=>'创建交易',
 			'url'=>array('create', 'pid'=>$model->project->id));
-}
+} */
 
 
 if(Yii::app()->user->checkAccess('updateIssue',$params))
@@ -47,11 +47,11 @@ if(Yii::app()->user->checkAccess('updateIssue',$params))
 			
 } */
 
-if(Yii::app()->user->checkAccess('admin'))
+/* if(Yii::app()->user->checkAccess('admin'))
 {
 	$this->menu[] = array('label'=>'管理交易',
 			'url'=>array('admin', 'pid'=>$model->project->id));
-} 
+}  */
 				
 ?>
 

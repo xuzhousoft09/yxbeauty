@@ -1,7 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	
-	'Manage',
+		$model->project->name=>array('project/view', 'id'=>$model->project->id),
 );
 
 $this->menu=array(

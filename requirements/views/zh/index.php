@@ -34,7 +34,7 @@
 <h2>具体结果</h2>
 
 <table class="result">
-<tr><th>项目名称</th><th>结果</th><th>使用者</th><th>备注</th></tr>
+<tr><th>项目业务名称</th><th>结果</th><th>使用者</th><th>备注</th></tr>
 <?php foreach($requirements as $requirement): ?>
 <tr>
 	<td>

@@ -56,7 +56,7 @@ class UserMenu extends CPortlet
 </ul>
 ~~~
 
-> Info|信息: 默认情况下，小物件的视图文件应保存在包含小物件类文件的目录的 `views` 子目录中。文件名必须和视图名称相同。
+> Info|信息: 默认情况下，小物件的视图文件应保存在包含小物件类文件的目录的 `views` 子目录中。文件名必须和视图业务名称相同。
 
 
 使用 `UserMenu` Portlet

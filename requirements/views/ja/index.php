@@ -38,7 +38,7 @@
 <h2>詳細</h2>
 
 <table class="result">
-<tr><th>名称</th><th>結果</th><th>必要元</th><th>備考</th></tr>
+<tr><th>业务名称</th><th>結果</th><th>必要元</th><th>備考</th></tr>
 <?php foreach($requirements as $requirement): ?>
 <tr>
 	<td>

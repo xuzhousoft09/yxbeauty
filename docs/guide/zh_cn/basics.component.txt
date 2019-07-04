@@ -47,7 +47,7 @@ public function setTextWidth($value)
 一个组件的行为可能会被一种在部件开发过程中不可预见的方式修改。
 
 组件事件以 `on` 开头的命名方式定义。和属性通过 getter/setter 方法来定义的命名方式一样，
-事件的名称是大小写不敏感的。以下代码定义了一个 `onClicked` 事件:
+事件的业务名称是大小写不敏感的。以下代码定义了一个 `onClicked` 事件:
 
 ~~~
 [php]

@@ -5,10 +5,10 @@
 
   1. 从 Yii 的 [扩展库](http://www.yiiframework.com/extensions/) 下载扩展.
   2. 解压到 [应用程序的基目录](/doc/guide/basics.application#application-base-directory)
-的子目录 `extensions/xyz` 下,这里的 `xyz` 是扩展的名称.
+的子目录 `extensions/xyz` 下,这里的 `xyz` 是扩展的业务名称.
   3. 导入, 配置和使用扩展.
 
-每个扩展都有一个所有扩展中唯一的名称标识.把一个扩展命名为 `xyz` ,我们也可以使用路径别名定位到包含了 `xyz`
+每个扩展都有一个所有扩展中唯一的业务名称标识.把一个扩展命名为 `xyz` ,我们也可以使用路径别名定位到包含了 `xyz`
 所有文件的基目录.
 
 不同的扩展有着不同的导入,配置,使用要求.以下是我们通常会用到扩展的场景,按照他们在
