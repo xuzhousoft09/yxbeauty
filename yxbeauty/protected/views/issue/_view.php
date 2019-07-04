@@ -1,6 +1,6 @@
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('姓名')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('业务名称')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->name), array('issue/view', 'id'=>$data->id)); ?>
 	<br />
 

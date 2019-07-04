@@ -123,7 +123,7 @@ class Issue extends TrackStarActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => '姓名',
+			'name' => '业务名称',
 			'description' => '备注',
 			'project_id' => '顾客',
 			'type_id' => '类型',

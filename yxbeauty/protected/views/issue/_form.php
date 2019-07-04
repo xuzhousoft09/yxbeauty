@@ -12,7 +12,7 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'姓名'); ?>
+		<?php echo $form->labelEx($model,'业务名称'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
@@ -81,14 +81,7 @@
 	</div>
 
 	<div class="row">
-		
-		
-		
-		<?php if (!$this->getProject()->getUserOptions()):?>
-	<?php echo 'You must add some users to this project frist.';?>
-	<?php endif ?>
-		<?php echo $form->error($model,'requester_id'); ?>
-	</div>
+
 
 
 
