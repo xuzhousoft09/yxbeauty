@@ -3,9 +3,6 @@ $this->breadcrumbs=array(
 	'Issues',
 );
 
-
-
-
 		
 ?>
 

@@ -1,8 +1,8 @@
 <?php
 $this->breadcrumbs=array(
-	'Issues'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
-	'Update',
+	'issues'=>array('index'),
+	$model->name=>array('index','id'=>$model->pid),
+	'issues',
 );
 ?>
 

@@ -4787,3 +4787,50 @@ REQUEST_URI=/yxbeauty/index.php?r=issue/admin&pid=1
 in E:\projects\yxbeauty\yxbeauty\protected\views\issue\admin.php (8)
 in E:\projects\yxbeauty\yxbeauty\protected\controllers\IssueController.php (219)
 in E:\projects\yxbeauty\yxbeauty\protected\controllers\IssueController.php (260)
+2019/07/04 09:51:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in E:\projects\yxbeauty\yxbeauty\protected\controllers\IssueController.php:25
+Stack trace:
+#0 E:\projects\yxbeauty\yxbeauty\protected\controllers\IssueController.php(258): IssueController->loadProject(NULL)
+#1 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#5 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('index')
+#10 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('issue/index')
+#11 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#12 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/yxbeauty/index.php?r=issue/index
+2019/07/04 09:55:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\projects\yxbeauty\framework\web\actions\CInlineAction.php:52
+Stack trace:
+#0 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#1 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#4 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#7 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('view')
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('issue/view')
+#10 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#11 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/yxbeauty/index.php?r=issue/view
+2019/07/04 09:58:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in E:\projects\yxbeauty\yxbeauty\protected\controllers\IssueController.php:25
+Stack trace:
+#0 E:\projects\yxbeauty\yxbeauty\protected\controllers\IssueController.php(258): IssueController->loadProject(NULL)
+#1 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#5 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('index')
+#10 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('issue/index')
+#11 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#12 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/yxbeauty/index.php?r=issue/index

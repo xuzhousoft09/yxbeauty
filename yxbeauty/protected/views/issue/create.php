@@ -1,8 +1,10 @@
 <?php
 $this->breadcrumbs=array(
-	
-	'Create',
-);
+		$model->project->name=>array('project/view', 'id'=>$model->project->id),
+		/* 'Issues'=>array('index'), */
+		$model->name,
+ );
+
 
 $this->menu=array(
 	/* array('label'=>'交易列表', 'url'=>array('issue/index','pid'=>$model->project_id)), */
