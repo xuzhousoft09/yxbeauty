@@ -109,6 +109,8 @@ class Project extends TrackStarActiveRecord
 		$criteria->compare('create_user_id',$this->create_user_id);
 		$criteria->compare('update_time',$this->update_time,true);
 		$criteria->compare('update_user_id',$this->update_user_id);
+		
+		var_dump($criteria);
 
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,

@@ -167,7 +167,7 @@ class Issue extends TrackStarActiveRecord
 		
 		$criteria->condition='project_id=:projectID';
 		$criteria->params=array(':projectID'=>$this->project_id);
-        
+        var_dump($criteria);
 
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,
