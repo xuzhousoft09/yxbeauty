@@ -10,7 +10,6 @@ $this->menu=array(array('label'=>'回到顾客','url'=>array('view','id'=>$model
 
 <h1>添加用户到<?php echo $model->project->name;?></h1>
 
-
 <?php if(Yii::app()->user->hasFlash('success')):?>
 
 <div class="successMessage">
