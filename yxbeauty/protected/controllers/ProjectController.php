@@ -233,14 +233,12 @@ class ProjectController extends Controller
 			throw new CHttpException(403,'You are not authorized to per-form this action');
 		}
 		$form=new ProjectUserForm;
-		/* var_dump($form); 
-		exit;  successfully created a object*/		
-		// collect user input data
 		if(isset($_POST['ProjectUserForm']))
 		{
 			$form->attributes=$_POST['ProjectUserForm'];
 			$form->project = $project;
 			// validate user input and set a sucessfull flassh message if valid
+	
 			if($form->validate())
 			{
 				Yii::app()->user->setFlash('success',$form->username .

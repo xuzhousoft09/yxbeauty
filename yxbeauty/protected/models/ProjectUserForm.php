@@ -15,23 +15,6 @@ class ProjectUserForm extends CFormModel
 		);
 	}
 
-	/* public function verify($attribute,$params)
-	{
-		if(!$this->hasErrors())  // we only want to authenticate when no other input errors are present
-		{
-			$user = User::model()->findByAttributes(array('username'=>$this->username));
-			
-			if($this->project->isUserInProject($user))
-			{
-				$this->addError('username','This user has already been added to the project.');
-			}
-			else
-			{
-				
-				$this->_user = $user;
-			}
-		}
-	} */
 	public function verify($attribute,$params)
 	{
 		if(!$this->hasErrors()) // we only want to authenticate when no other input errors are present
