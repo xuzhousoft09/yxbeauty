@@ -176,4 +176,11 @@ class Project extends TrackStarActiveRecord
 		$consumptions = $command->queryAll();
 	    return $consumptions;
 	}
+	public function getUserText($user_id=null)
+	{
+		$sql="SELECT username FROM tbl_user WHERE id= $user_id";
+		$command = Yii::app()->db->createCommand($sql);
+		$username = $command->queryAll();
+		return $username;
+	}
 }
