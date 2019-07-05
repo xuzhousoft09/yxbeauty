@@ -34,7 +34,7 @@
 					array('label'=>'主页', 'url'=>array('/site/index')),
 					array('label'=>'关于', 'url'=>array('/site/page', 'view'=>'about')),
 						
-					array('label'=>'顾客', 'url'=>array('/project/index')),
+					array('label'=>'客户', 'url'=>array('/project/index')),
 					 
 					
 					array('label'=>'系统消息', 'url'=>array('/admin/sysMessage/index')),

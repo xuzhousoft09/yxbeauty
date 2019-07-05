@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 
-	array('label'=>'创建顾客', 'url'=>array('create')),
+	array('label'=>'创建客户', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>管理顾客</h1>
+<h1>管理客户</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
