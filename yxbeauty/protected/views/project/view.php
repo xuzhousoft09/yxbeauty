@@ -25,17 +25,23 @@ if(Yii::app()->user->checkAccess('updateProject',array('project'=>$model)))
 
 if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 {
-	$this->menu[] = array('label'=>'分配用户到顾客',
+	$this->menu[] = array('label'=>'分配用户到客户',
 	'url'=>array('adduser', 'id'=>$model->id));
 }
-
+if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
+{
+	$this->menu[] = array('label'=>'管理客户',
+			'url'=>array('admin', 'id'=>$model->id));
+}
 
 /* var_dump(Yii::app()->user->checkAccess('deleteProject',array('project'=>$model))); */ //returned true
 
 ?>
 
-<h1>顾客</h1>
+<h1>客户</h1>
 <?php foreach($model->caculateTheConsumptions($model->id)[0] as $c)?>
+<?php foreach($model->getUserText($model->update_user_id)[0] as $updater)?>
+<?php foreach($model->getUserText($model->create_user_id)[0] as $creater)?>
 <?php $d = $model->deposit; $b = $d - $c;?>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -56,16 +62,24 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 			),
 		'description',
 		'create_time',
-		'create_user_id',
+		array(
+					'name'=>'创建用户',
+					'value'=>CHtml::encode($creater),
+					'type'=>'raw',
+			),
 		'update_time',
-		'update_user_id',
+		array(
+					'name'=>'更新用户',
+					'value'=>CHtml::encode($updater),
+					'type'=>'raw',
+			),
 	),
 	
 		
 )); ?>
 <br>
 
-<h1>顾客交易</h1>
+<h1>客户交易</h1>
 <?php $this->widget('zii.widgets.CListView', array(
 'dataProvider'=>$issueDataProvider,
 'itemView'=>'/issue/_view',

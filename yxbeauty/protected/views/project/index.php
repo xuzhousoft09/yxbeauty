@@ -4,9 +4,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-		array('label'=>'创建顾客', 'url'=>array('create'),'visible'=>Yii::app()->user->checkAccess("admin")),
+		array('label'=>'创建客户', 'url'=>array('create'),'visible'=>Yii::app()->user->checkAccess("admin")),
 
-	array('label'=>'管理顾客', 'url'=>array('admin'),'visible'=>Yii::app()->user->checkAccess("admin")),
+	array('label'=>'管理客户', 'url'=>array('admin'),'visible'=>Yii::app()->user->checkAccess("admin")),
 		
 );
 
@@ -25,7 +25,7 @@ $this->menu=array(
 <br/>
 
 
-<h1>顾客</h1>
+<h1>客户</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
