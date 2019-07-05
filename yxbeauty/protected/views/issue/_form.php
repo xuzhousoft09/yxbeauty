@@ -52,14 +52,14 @@
      </div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'类型ID'); ?>
+		<?php echo $form->labelEx($model,'类型'); ?>
 		<?php echo $form->dropDownList($model,'type_id', $model->getTypeOptions());?>
 			<?php  /* var_dump($model->getTypeOptions()); */ ?>
 		<?php echo $form->error($model,'type_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'状态ID'); ?>
+		<?php echo $form->labelEx($model,'状态'); ?>
 	<?php  echo $form->dropDownList($model,'status_id', $model->getStatusOptions()); ?>
 			<?php /* echo $form->textField($model,'status_id');  */?>		
 			<?php  /* var_dump($model->getStatusOptions()); */  ?>

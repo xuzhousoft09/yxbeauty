@@ -30,12 +30,12 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'类型ID'); ?>
+		<?php echo $form->label($model,'类型'); ?>
 		<?php echo $form->textField($model,'type_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'状态ID'); ?>
+		<?php echo $form->label($model,'状态'); ?>
 		<?php echo $form->textField($model,'status_id'); ?>
 	</div>
 

@@ -16,12 +16,12 @@
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('类型ID')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('类型')); ?>:</b>
 	<?php /* echo CHtml::encode($data->type_id); */ ?>
 	<?php echo CHtml::encode($data->getTypeText()); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('状态ID')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('状态')); ?>:</b>
 	<?php echo CHtml::encode($data->getStatusText()); ?>
 	
 	<br />

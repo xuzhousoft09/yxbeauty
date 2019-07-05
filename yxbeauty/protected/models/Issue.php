@@ -42,9 +42,9 @@ class Issue extends TrackStarActiveRecord
     	
     	
         return array(
-            self::TYPE_BUG=>'白金',
-            self::TYPE_FEATURE=>'黄金',
-            self::TYPE_TASK=>'白银',
+            self::TYPE_BUG=>'美睫',
+            self::TYPE_FEATURE=>'美甲',
+            self::TYPE_TASK=>'皮肤管理',
           
         );
         
@@ -53,9 +53,9 @@ class Issue extends TrackStarActiveRecord
      public function getStatusOptions()
     {
         return array(
-            self::TYPE_NOT_YET_STARTED=>'美睫',
-            self::TYPE_STARTED=>'美甲',
-            self::TYPE_FINISHED=>'皮肤管理',
+            self::TYPE_NOT_YET_STARTED=>'白金',
+            self::TYPE_STARTED=>'黄金',
+            self::TYPE_FINISHED=>'白银',
             
         );
         
