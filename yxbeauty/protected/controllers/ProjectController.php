@@ -70,7 +70,7 @@ class ProjectController extends Controller
 	            'params'=>array(':projectId'=>$this->loadModel($id)->id),
 	        ),
 	        'pagination'=>array(
-	            'pageSize'=>1,
+	            'pageSize'=>1000,
 	        ),
 	    ));
 	    $this->render('view',array(
