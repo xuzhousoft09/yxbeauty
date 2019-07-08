@@ -232,7 +232,7 @@ class ProjectController extends Controller
 		{
 			throw new CHttpException(403,'You are not authorized to per-form this action');
 		}
-		$form=new ProjectUserForm;
+		$form = new ProjectUserForm;
 		if(isset($_POST['ProjectUserForm']))
 		{
 			$form->attributes=$_POST['ProjectUserForm'];
@@ -243,7 +243,7 @@ class ProjectController extends Controller
 			{
 				Yii::app()->user->setFlash('success',$form->username .
 						" has been added to the project." );
-				$form=new ProjectUserForm;
+				$form = new ProjectUserForm;
 			}
 		}
 		// display the add user form

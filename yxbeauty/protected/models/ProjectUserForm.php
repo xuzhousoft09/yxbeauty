@@ -27,12 +27,19 @@ class ProjectUserForm extends CFormModel
 				}
 				else
 				{
+					try {
 					$this->project->associateUserToProject($user);
 					$this->project->associateUserToRole($this->role,$user->id);
 					$auth = Yii::app()->authManager;
 					$bizRule='return isset($params["project"]) &&$params["project"]->isUserInRole("'.$this->role.'");';
 					$auth->assign($this->role,$user->id, $bizRule);
+					}
+					catch(CDbException $e) {
+						/* echo "Got exception:" . $e->getMessage();  */
+					}
 				}
 		}
 	}
 }
+
+
