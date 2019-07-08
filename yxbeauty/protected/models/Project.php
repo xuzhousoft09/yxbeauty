@@ -112,6 +112,8 @@ class Project extends TrackStarActiveRecord
 		
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,
+				'pagination'=>array(
+						'pageSize'=>10000)				
 		));
 	}
 	public function getUserOptions()
