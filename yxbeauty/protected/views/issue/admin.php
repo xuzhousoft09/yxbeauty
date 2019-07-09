@@ -41,14 +41,38 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
+			array(
+					'name'=>'project_id',
+					'value'=>'implode($data->getProjectText($data->project_id)[0])',
+			
+			),
 		'name',
 		'consumption',
 		'consumption_date',
-		'description',
-		'project_id',
-		'type_id',
-		'status_id',
-		'owner_id',
+	
+		/* 'project_id',  */
+		
+	
+		/* 'type_id', */
+			array(
+					'name'=>'type_id',
+					'value'=>'print_r($data->getTypeText())[0]',
+			
+			),
+			
+		/* 'status_id', */
+			array(
+					'name'=>'status_id',
+					'value'=>'print_r($data->getStatusText())[0]',
+						
+			),
+	/* 	'owner_id', */
+			array(
+					'name'=>'owner_id',
+					'value'=>'implode($data->getUserText($data->owner_id)[0])',
+			
+			),
+			'description',
 		array(
 			'class'=>'CButtonColumn',
 		),

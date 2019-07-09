@@ -36,24 +36,35 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'project-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+		
 	'columns'=>array(
 		'id',
 		'name',
 		'telephone',
 		'deposit',
 		'description',
-		'create_time',
-		'create_user_id', 
 		
-		'update_time',
+	/* 	'create_user_id',  */
+			array(         
+					'name'=>'create_user_id',
+					'value'=>'implode($data->getUserText($data->create_user_id)[0])',
+					
+			),
+	
+			'create_time',
+		 /* 'update_user_id', */ 
+			array(
+					'name'=>'update_user_id',
+					'value'=>'implode($data->getUserText($data->update_user_id)[0])',
+						
+			),
 		
-		 'update_user_id', 
-		
+			'update_time',
 		array(
 			'class'=>'CButtonColumn',
 		),

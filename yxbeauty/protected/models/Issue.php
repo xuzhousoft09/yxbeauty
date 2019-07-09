@@ -1,6 +1,6 @@
 <?php
 
-
+Yii::import('application.modules.moduleName.models.*');
 
 /**
  * This is the model class for table "tbl_issue".
@@ -194,4 +194,18 @@ class Issue extends TrackStarActiveRecord
 	    $typeOptions=$this->typeOptions;
 	    return isset($typeOptions[$this->type_id]) ? $typeOptions[$this->type_id] : "unknown type ({$this->type_id})";
 	}  
+    public function getUserText($user_id=null)
+	{
+		$sql="SELECT username FROM tbl_user WHERE id= $user_id";
+		$command = Yii::app()->db->createCommand($sql);
+		$username = $command->queryAll();
+		return $username;
+	} 
+	public function getProjectText($project_id=null)
+	{
+		$sql="SELECT name FROM tbl_project WHERE id= $project_id";
+		$command = Yii::app()->db->createCommand($sql);
+		$name = $command->queryAll();
+		return $name;
+	}
 }
