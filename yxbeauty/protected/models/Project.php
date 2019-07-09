@@ -83,9 +83,9 @@ class Project extends TrackStarActiveRecord
 			'consumptions'=>'消费总额',
 			'balance'=>'余额',
 			'create_time' => '创建时间',
-			'create_user_id' => '创建用户ID',
+			'create_user_id' => '创建用户',
 			'update_time' => '更新时间',
-			'update_user_id' => '更新用户ID',
+			'update_user_id' => '更新用户',
 		);
 	}
 

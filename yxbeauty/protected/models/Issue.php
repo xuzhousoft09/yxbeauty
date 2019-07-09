@@ -126,7 +126,7 @@ class Issue extends TrackStarActiveRecord
 			'id' => 'ID',
 			'name' => '业务名称',
 			'description' => '备注',
-			'project_id' => '客户ID',
+			'project_id' => '客户',
 			'type_id' => '类型',
 			'status_id' => '状态',
 			'owner_id' => '负责人',

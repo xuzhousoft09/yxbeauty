@@ -25,7 +25,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'客户ID'); ?>
+		<?php echo $form->label($model,'客户'); ?>
 		<?php echo $form->textField($model,'project_id'); ?>
 	</div>
 
