@@ -25,6 +25,9 @@
 	<?php echo CHtml::encode($data->getStatusText()); ?>
 	
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('负责人')); ?>:</b>
+	<?php echo CHtml::encode($data->owner->username); ?>
 
 	
 
