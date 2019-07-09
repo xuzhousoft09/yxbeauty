@@ -1,8 +1,12 @@
 <?php
+$id = $_GET['id']+0;
+$model=$this->loadModel($id); 
+
 $this->breadcrumbs=array(
-	'Projects'=>array('index'),
-	'admin',
+		'project'=>array('project/view', 'id'=>"$model->id"),
 );
+
+$model->unsetAttributes();
 
 $this->menu=array(
 
