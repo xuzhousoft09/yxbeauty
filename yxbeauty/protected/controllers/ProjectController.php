@@ -166,7 +166,13 @@ class ProjectController extends Controller
 		{
 			throw new CHttpException(403,'You are not authorized to per-form this action');
 		} */
-		$dataProvider=new CActiveDataProvider('Project');
+		//$dataProvider=new CActiveDataProvider('Project');
+		$dataProvider=new CActiveDataProvider('Project', array(
+				
+				'pagination'=>array(
+						'pageSize'=>1000,
+				),
+		));
 	/* 	var_dump($this); */
 		/* $this->render('index',array(
 			'dataProvider'=>$dataProvider,
