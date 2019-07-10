@@ -16,11 +16,6 @@ $this->menu=array(
 );
 
 
-if(Yii::app()->user->checkAccess('updateProject',array('project'=>$model)))
-{
-	$this->menu[] = array('label'=>'更新客户',
-	'url'=>array('update', 'id'=>$model->id));// defined only the users who have the updateProject permission can update the projects
-}
 
 
 if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
@@ -28,13 +23,18 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 	$this->menu[] = array('label'=>'分配用户到客户',
 	'url'=>array('adduser', 'id'=>$model->id));
 }
-if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
+/* if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 {
 	$this->menu[] = array('label'=>'管理客户',
 			'url'=>array('admin', 'id'=>$model->id));
-}
+} */
 
 /* var_dump(Yii::app()->user->checkAccess('deleteProject',array('project'=>$model))); */ //returned true
+if(Yii::app()->user->checkAccess('updateProject',array('project'=>$model)))
+{
+	$this->menu[] = array('label'=>'更新客户',
+	'url'=>array('update', 'id'=>$model->id));// defined only the users who have the updateProject permission can update the projects
+}
 
 ?>
 

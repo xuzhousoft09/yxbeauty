@@ -5,10 +5,15 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 		array('label'=>'创建客户', 'url'=>array('create'),'visible'=>Yii::app()->user->checkAccess("admin")),
-
-	array('label'=>'管理客户', 'url'=>array('admin'),'visible'=>Yii::app()->user->checkAccess("admin")),
+		
 		
 );
+
+if(Yii::app()->user->checkAccess('admin'))
+{
+	$this->menu[] = array('label'=>'管理客户',
+			'url'=>array('admin','id'=>'1'));
+}
 
 ?>
 
