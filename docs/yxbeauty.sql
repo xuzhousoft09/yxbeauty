@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2019 at 09:59 AM
+-- Generation Time: Jul 11, 2019 at 06:35 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -38,7 +38,20 @@ CREATE TABLE `authassignment` (
 --
 
 INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
+('admin', '10', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
 ('admin', '12', NULL, 'N;'),
+('admin', '13', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
+('admin', '14', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
+('admin', '15', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
+('admin', '2', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
+('admin', '5', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
+('admin', '7', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
+('admin', '8', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
+('admin', '9', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;'),
+('member', '10', 'return isset($params["project"]) &&$params["project"]->isUserInRole("member");', 'N;'),
+('member', '13', 'return isset($params["project"]) &&$params["project"]->isUserInRole("member");', 'N;'),
+('member', '7', 'return isset($params["project"]) &&$params["project"]->isUserInRole("member");', 'N;'),
+('member', '8', 'return isset($params["project"]) &&$params["project"]->isUserInRole("member");', 'N;'),
 ('reader', '5', 'return isset($params["project"]) &&$params["project"]->isUserInRole("admin");', 'N;');
 
 -- --------------------------------------------------------
@@ -125,7 +138,7 @@ CREATE TABLE `tbl_issue` (
   `name` varchar(256) CHARACTER SET utf8 NOT NULL,
   `consumption_date` varchar(255) DEFAULT NULL,
   `description` varchar(2000) CHARACTER SET utf8 DEFAULT NULL,
-  `consumption` int(255) DEFAULT NULL,
+  `consumption` int(255) NOT NULL,
   `project_id` int(11) DEFAULT NULL,
   `type_id` int(11) DEFAULT NULL,
   `status_id` int(11) DEFAULT NULL,
@@ -142,32 +155,35 @@ CREATE TABLE `tbl_issue` (
 --
 
 INSERT INTO `tbl_issue` (`id`, `name`, `consumption_date`, `description`, `consumption`, `project_id`, `type_id`, `status_id`, `owner_id`, `requester_id`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES
-(15, 'issue belong to project1', '2019-07-05', '1234', 1, 1, 0, 4, 5, 1, NULL, NULL, '2019-07-02 16:43:09', 12),
-(16, 'test issue belong to project1', NULL, '', NULL, 1, 0, 4, 1, 1, NULL, NULL, '2018-12-09 23:01:19', 0),
-(18, 'test issue belong to project1', NULL, '', NULL, 1, 0, 5, 1, 1, NULL, NULL, NULL, NULL),
-(19, 'test issue belong to project1', NULL, 'test', NULL, 1, 0, 3, 1, 1, '2018-12-16 12:05:11', 5, '2018-12-16 12:06:08', 5),
+(15, 'issue belong to project1', '2019-07-05', '', 1, 1, 0, 4, 5, 1, NULL, NULL, '2019-07-04 17:42:23', 12),
+(16, 'test issue belong to project1', NULL, '', 0, 1, 0, 4, 1, 1, NULL, NULL, '2018-12-09 23:01:19', 0),
+(18, 'test issue belong to project1', NULL, '', 0, 1, 0, 5, 1, 1, NULL, NULL, NULL, NULL),
+(19, 'test issue belong to project1', NULL, 'test', 0, 1, 0, 3, 1, 1, '2018-12-16 12:05:11', 5, '2018-12-16 12:06:08', 5),
 (20, '测试交易for客户2', NULL, 'Test', 1, 2, 0, 3, 5, NULL, '2019-04-24 15:34:05', 12, '2019-07-01 17:35:17', 12),
-(21, '交易', NULL, '111', NULL, 1, 0, 3, 1, 1, '2019-06-26 16:26:15', 12, '2019-06-26 16:26:15', 12),
-(22, '耿天天', NULL, '', NULL, 1, 0, 3, 1, NULL, '2019-06-26 16:37:14', 12, '2019-06-26 16:37:14', 12),
-(23, '1', NULL, '1', NULL, 1, 0, 3, 5, NULL, '2019-06-27 14:41:31', 12, '2019-06-27 14:41:31', 12),
-(24, '测试2', NULL, '111', NULL, 1, 0, 3, 1, NULL, '2019-06-27 14:48:40', 12, '2019-06-27 14:48:40', 12),
-(26, '小甜甜', NULL, '1', NULL, 1, 0, 3, 7, NULL, '2019-06-27 15:06:52', 12, '2019-06-27 15:06:52', 12),
-(27, '测试2', NULL, '1', NULL, 1, 0, 3, 1, NULL, '2019-06-27 15:46:29', 12, '2019-06-27 15:46:29', 12),
+(21, '交易', NULL, '111', 0, 1, 0, 3, 1, 1, '2019-06-26 16:26:15', 12, '2019-06-26 16:26:15', 12),
+(22, '耿天天', NULL, '', 0, 1, 0, 3, 1, NULL, '2019-06-26 16:37:14', 12, '2019-06-26 16:37:14', 12),
+(23, '1', NULL, '1', 0, 1, 0, 3, 5, NULL, '2019-06-27 14:41:31', 12, '2019-06-27 14:41:31', 12),
+(24, '测试2', NULL, '111', 0, 1, 0, 3, 1, NULL, '2019-06-27 14:48:40', 12, '2019-06-27 14:48:40', 12),
+(26, '小甜甜', NULL, '1', 0, 1, 0, 3, 7, NULL, '2019-06-27 15:06:52', 12, '2019-06-27 15:06:52', 12),
+(27, '测试2', NULL, '1', 0, 1, 0, 3, 1, NULL, '2019-06-27 15:46:29', 12, '2019-06-27 15:46:29', 12),
 (28, 'consumption', NULL, '111', 1, 1, 0, 3, 1, NULL, '2019-07-01 14:55:19', 12, '2019-07-01 14:55:19', 12),
 (29, '1', NULL, '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 15:36:56', 12, '2019-07-01 15:51:23', 12),
 (30, '1', NULL, '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 15:52:25', 12, '2019-07-01 16:07:58', 12),
 (31, '测试2', NULL, '111', 1, 1, 0, 3, 1, NULL, '2019-07-01 16:08:24', 12, '2019-07-01 16:29:21', 12),
 (32, 'test issue belong to project1', '2019-07-01', 'テスト', 1, 1, 0, 3, 1, NULL, '2019-07-01 16:30:45', 12, '2019-07-01 17:33:55', 12),
-(34, '1', '2019-07-05', '1', 2, 2, 0, 3, 5, NULL, '2019-07-01 17:36:06', 12, '2019-07-02 15:02:08', 12),
+(34, '1', '2019-07-05', '11', 2, 2, 0, 3, 5, NULL, '2019-07-01 17:36:06', 12, '2019-07-09 17:01:02', 12),
 (35, '1', NULL, '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 17:42:53', 12, '2019-07-01 17:42:53', 12),
-(36, 'test issue belong to project1', '1', '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 17:55:21', 12, '2019-07-01 17:55:21', 12),
+(36, 'test issue belong to project1', '2019-07-10', '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 17:55:21', 12, '2019-07-09 17:00:29', 12),
 (37, '1', NULL, '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 18:05:58', 12, '2019-07-01 18:06:19', 12),
 (38, '1', '2', '1', 1, 2, 0, 3, 5, NULL, '2019-07-01 18:17:19', 12, '2019-07-01 18:17:26', 12),
-(39, '1', '2019/07/02', '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 18:21:50', 12, '2019-07-01 18:22:51', 12),
-(40, '1', '07/05/2019', '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 18:36:20', 12, '2019-07-01 18:36:20', 12),
-(41, '11', '07/02/2019', '1', 1, 1, 0, 3, 1, NULL, '2019-07-01 18:36:43', 12, '2019-07-01 18:37:20', 12),
-(42, '111', '07/22/2019', '', 2, 1, 0, 3, 1, NULL, '2019-07-01 18:41:33', 12, '2019-07-01 18:41:33', 12),
-(43, '1111111111', '2019-07-05', '111111', 111111111, 1, 0, 3, 1, NULL, '2019-07-01 18:46:43', 12, '2019-07-01 18:46:43', 12);
+(44, '1', '2019-07-06', '1', 24, 3, 2, 3, 5, NULL, '2019-07-04 13:59:27', 12, '2019-07-09 16:54:43', 12),
+(45, '1', '2019-07-10', '1', 1, 3, 0, 4, 5, NULL, '2019-07-04 14:00:31', 12, '2019-07-09 16:58:28', 12),
+(46, '1', '2019-07-05', '', 1, 4, 0, 3, 5, NULL, '2019-07-05 16:33:40', 12, '2019-07-05 16:33:40', 12),
+(47, '1', '2019-07-20', '', 24, 8, 0, 3, 8, NULL, '2019-07-05 16:35:14', 12, '2019-07-05 16:35:14', 12),
+(48, '做指甲', '2019-07-01', '', 100, 9, 1, 3, 14, NULL, '2019-07-05 20:29:13', 12, '2019-07-05 20:29:13', 12),
+(51, '美睫', '2019-07-05', '', 100, 11, 0, 3, 8, NULL, '2019-07-08 17:02:28', 12, '2019-07-08 17:02:28', 12),
+(52, '1', '', '', 1, 12, 0, 3, 8, NULL, '2019-07-08 17:30:18', 12, '2019-07-08 17:30:18', 12),
+(56, '1', '2019-07-12', '', 1, 15, 0, 3, 5, NULL, '2019-07-10 18:31:41', 12, '2019-07-10 18:31:41', 12);
 
 -- --------------------------------------------------------
 
@@ -178,8 +194,8 @@ INSERT INTO `tbl_issue` (`id`, `name`, `consumption_date`, `description`, `consu
 CREATE TABLE `tbl_project` (
   `id` int(11) NOT NULL,
   `name` varchar(128) CHARACTER SET utf8 DEFAULT NULL,
-  `telephone` int(255) NOT NULL,
-  `deposit` int(255) NOT NULL,
+  `telephone` int(255) DEFAULT NULL,
+  `deposit` int(255) DEFAULT NULL,
   `description` text CHARACTER SET utf8,
   `create_time` datetime DEFAULT NULL,
   `create_user_id` int(11) DEFAULT NULL,
@@ -192,12 +208,19 @@ CREATE TABLE `tbl_project` (
 --
 
 INSERT INTO `tbl_project` (`id`, `name`, `telephone`, `deposit`, `description`, `create_time`, `create_user_id`, `update_time`, `update_user_id`) VALUES
-(1, '饼子脸', 0, 1, '测试', NULL, NULL, '2019-07-02 17:57:46', 12),
-(2, 'Test Project15', 1111, 1, '测试', '2018-12-16 13:56:34', 5, '2019-06-28 17:56:13', 12),
-(3, '天天华盛顿', 0, 0, '天天华盛顿', '2019-06-27 15:42:56', 12, '2019-06-27 15:42:56', 12),
-(4, 'Test Project15', 0, 0, '1', '2019-06-28 17:07:39', 12, '2019-06-28 17:07:39', 12),
+(1, '饼子脸', 11, 122, '测试', NULL, 1, '2019-07-10 18:34:09', 12),
+(2, 'Test Project15', 1111, 11, '测试', '2018-12-16 13:56:34', 5, '2019-07-09 15:57:37', 12),
+(3, '天天华盛顿', 0, 100, '天天华盛顿', '2019-06-27 15:42:56', 12, '2019-07-04 15:18:33', 12),
+(4, 'Test Project15', 0, 10, '1', '2019-06-28 17:07:39', 12, '2019-07-09 17:02:32', 12),
 (5, 'Test Project15', 0, 0, '1', '2019-06-28 17:11:20', 12, '2019-06-28 17:11:20', 12),
-(6, '1', 1, 1, '1', '2019-07-01 16:43:16', 12, '2019-07-01 16:43:16', 12);
+(6, '1', 1, 1, '1', '2019-07-01 16:43:16', 12, '2019-07-01 16:43:16', 12),
+(7, '郭美美', NULL, 100, '', '2019-07-04 15:38:37', 12, '2019-07-04 15:40:19', 12),
+(8, '范冰冰', NULL, 100000, '', '2019-07-04 15:41:29', 12, '2019-07-04 15:42:44', 12),
+(9, '黄小明', 2147483647, 10000000, 'big star', '2019-07-05 20:26:23', 12, '2019-07-05 20:26:23', 12),
+(10, '吕小强', 2147483647, 1000, '', '2019-07-05 20:30:49', 12, '2019-07-05 20:30:49', 12),
+(11, '杰克逊', NULL, 1000, '', '2019-07-08 17:01:29', 12, '2019-07-08 17:01:29', 12),
+(12, '1', 1, NULL, '', '2019-07-08 17:29:02', 12, '2019-07-10 16:33:48', 12),
+(15, '吕天天', 1, 100, '11', '2019-07-10 18:28:07', 12, '2019-07-10 18:32:00', 12);
 
 -- --------------------------------------------------------
 
@@ -224,10 +247,35 @@ INSERT INTO `tbl_project_user_assignment` (`project_id`, `user_id`, `create_time
 (1, 5, NULL, NULL, NULL, NULL),
 (1, 7, NULL, NULL, NULL, NULL),
 (1, 8, NULL, NULL, NULL, NULL),
+(1, 10, NULL, NULL, NULL, NULL),
 (1, 11, NULL, NULL, NULL, NULL),
 (1, 13, NULL, NULL, NULL, NULL),
 (2, 5, NULL, NULL, NULL, NULL),
-(2, 13, NULL, NULL, NULL, NULL);
+(2, 13, NULL, NULL, NULL, NULL),
+(3, 5, NULL, NULL, NULL, NULL),
+(3, 8, NULL, NULL, NULL, NULL),
+(4, 5, NULL, NULL, NULL, NULL),
+(4, 7, NULL, NULL, NULL, NULL),
+(4, 8, NULL, NULL, NULL, NULL),
+(4, 9, NULL, NULL, NULL, NULL),
+(4, 13, NULL, NULL, NULL, NULL),
+(8, 5, NULL, NULL, NULL, NULL),
+(9, 5, NULL, NULL, NULL, NULL),
+(9, 7, NULL, NULL, NULL, NULL),
+(9, 8, NULL, NULL, NULL, NULL),
+(9, 13, NULL, NULL, NULL, NULL),
+(9, 14, NULL, NULL, NULL, NULL),
+(9, 15, NULL, NULL, NULL, NULL),
+(10, 5, NULL, NULL, NULL, NULL),
+(10, 7, NULL, NULL, NULL, NULL),
+(11, 5, NULL, NULL, NULL, NULL),
+(11, 7, NULL, NULL, NULL, NULL),
+(11, 8, NULL, NULL, NULL, NULL),
+(11, 10, NULL, NULL, NULL, NULL),
+(11, 13, NULL, NULL, NULL, NULL),
+(11, 15, NULL, NULL, NULL, NULL),
+(12, 8, NULL, NULL, NULL, NULL),
+(15, 5, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -246,9 +294,48 @@ CREATE TABLE `tbl_project_user_role` (
 --
 
 INSERT INTO `tbl_project_user_role` (`project_id`, `user_id`, `role`) VALUES
+(10, 2, 'admin'),
 (2, 5, 'admin'),
+(3, 5, 'admin'),
+(4, 5, 'admin'),
+(8, 5, 'admin'),
+(9, 5, 'admin'),
+(10, 5, 'admin'),
+(11, 5, 'admin'),
+(15, 5, 'admin'),
+(4, 7, 'admin'),
+(8, 7, 'admin'),
+(8, 7, 'member'),
+(9, 7, 'admin'),
+(10, 7, 'admin'),
+(11, 7, 'admin'),
 (1, 8, 'reader'),
-(1, 11, 'owner');
+(3, 8, 'admin'),
+(4, 8, 'admin'),
+(8, 8, 'admin'),
+(9, 8, 'member'),
+(10, 8, 'admin'),
+(11, 8, 'admin'),
+(12, 8, 'admin'),
+(4, 9, 'admin'),
+(1, 10, 'admin'),
+(8, 10, 'member'),
+(9, 10, 'member'),
+(10, 10, 'admin'),
+(11, 10, 'admin'),
+(1, 11, 'owner'),
+(8, 12, 'admin'),
+(4, 13, 'admin'),
+(8, 13, 'admin'),
+(9, 13, 'member'),
+(10, 13, 'admin'),
+(11, 13, 'admin'),
+(9, 14, 'admin'),
+(10, 14, 'admin'),
+(8, 15, 'admin'),
+(9, 15, 'admin'),
+(10, 15, 'admin'),
+(11, 15, 'admin');
 
 -- --------------------------------------------------------
 
@@ -306,8 +393,10 @@ INSERT INTO `tbl_user` (`id`, `email`, `username`, `password`, `last_login_time`
 (9, '123@1238.com', 'Test_for_project1', 'e10adc3949ba59abbe56e057f20f883e', NULL, '2018-12-13 15:15:03', 1, '2018-12-13 15:15:03', 1),
 (10, '123@12388888.com', '1010', '1e48c4420b7073bc11916c6c1de226bb', '2018-12-13 16:02:02', '2018-12-13 16:00:54', 1, '2018-12-13 16:00:54', 1),
 (11, '7777@1288888888883.com', 'project1_owner', '628efa8405a560c875b75f35058c49ba', '2018-12-13 17:31:58', '2018-12-13 16:16:37', 1, '2018-12-13 16:16:37', 1),
-(12, '123@823.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2019-07-02 11:34:18', '2018-12-14 00:17:47', 1, '2018-12-14 00:17:47', 1),
-(13, '13@123.com', 'aaa', '47bce5c74f589f4867dbd57e9ca9f808', NULL, '2019-06-27 16:10:08', 12, '2019-06-27 16:10:08', 12);
+(12, '123@823.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2019-07-11 14:31:33', '2018-12-14 00:17:47', 1, '2018-12-14 00:17:47', 1),
+(13, '13@123.com', 'aaa', '47bce5c74f589f4867dbd57e9ca9f808', NULL, '2019-06-27 16:10:08', 12, '2019-06-27 16:10:08', 12),
+(14, '1511586916@qq.com', '小妹No1', '098f6bcd4621d373cade4e832627b4f6', NULL, '2019-07-05 20:27:47', 12, '2019-07-05 20:27:47', 12),
+(15, '151158916@qq.com', '豆豆', '81dc9bdb52d04dc20036dbd8313ed055', NULL, '2019-07-05 20:31:56', 12, '2019-07-05 20:31:56', 12);
 
 --
 -- Indexes for dumped tables
@@ -382,12 +471,12 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_issue`
 --
 ALTER TABLE `tbl_issue`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT for table `tbl_project`
 --
 ALTER TABLE `tbl_project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `tbl_sys_message`
 --
@@ -397,7 +486,7 @@ ALTER TABLE `tbl_sys_message`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- Constraints for dumped tables
 --
