@@ -71,6 +71,17 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
+			$file=CUploadedFile::getInstance($model,'url');
+			
+			
+			if ($file) { 
+				$newimg = 'url_' . time() . '_' . rand(1, 9999) . '.' . $file->extensionName;
+				
+				$file->saveAs('assets/uploads/user/' . $newimg); 
+				$model->url = 'assets/uploads/user/' . $newimg;
+			}
+			$model->addtime = time();
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -88,10 +99,8 @@ class UserController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
@@ -175,4 +184,5 @@ class UserController extends Controller
 			Yii::app()->end();
 		}
 	}
+
 }

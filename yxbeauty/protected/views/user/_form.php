@@ -3,6 +3,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
 	'enableAjaxValidation'=>false,
+		'htmlOptions' => array('enctype'=>'multipart/form-data'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -31,7 +32,14 @@
 	<?php echo $form->passwordField($model,'password_repeat',array('size'=>60,'maxlength'=>256));?>
 	<?php echo $form->error($model,'password_repeat');?>
 	</div>
+	
 
+    <div class="row">
+        <?php echo $form->labelEx($model,'url'); ?>
+        
+        <?php echo CHtml::activeFileField($model,'url'); ?>
+        <?php echo $form->error($model,'url'); ?>
+    </div>
 
 
 
