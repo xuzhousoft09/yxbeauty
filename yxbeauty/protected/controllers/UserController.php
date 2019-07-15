@@ -2,6 +2,8 @@
 
 class UserController extends Controller
 {
+	public  $file;
+	
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
@@ -51,7 +53,7 @@ class UserController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{
+	{   
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -71,7 +73,9 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
-			$file=CUploadedFile::getInstance($model,'url');
+		
+	
+			 $file=CUploadedFile::getInstance($model,'url'); 
 			
 			
 			if ($file) { 
@@ -79,15 +83,17 @@ class UserController extends Controller
 				
 				$file->saveAs('assets/uploads/user/' . $newimg); 
 				$model->url = 'assets/uploads/user/' . $newimg;
+				
 			}
 			$model->addtime = time();
 			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->id, 'url'=>"$model->url"));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+				
 		));
 	}
 

@@ -40,6 +40,7 @@ if(Yii::app()->user->checkAccess('admin'))
 
 <h1>View User #<?php echo $model->id; ?></h1>
 
+
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -47,6 +48,12 @@ if(Yii::app()->user->checkAccess('admin'))
 		'email',
 		'username',
 		'password',
+			array(               // related city displayed as a link
+					'label'=>'File',
+					'type'=>'raw',
+					'value'=>CHtml::link(''),
+							
+			),
 		'last_login_time',
 		'create_time',
 		'create_user_id',

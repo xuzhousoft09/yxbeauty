@@ -37,8 +37,10 @@
     <div class="row">
         <?php echo $form->labelEx($model,'url'); ?>
         
-        <?php echo CHtml::activeFileField($model,'url'); ?>
+        <?php  echo CHtml::activeFileField($model,'url');  ?>  <!-- can upload only one file. --> 
+     
         <?php echo $form->error($model,'url'); ?>
+        
     </div>
 
 
