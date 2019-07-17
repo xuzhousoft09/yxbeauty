@@ -44,13 +44,13 @@ class Project extends TrackStarActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('deposit,telephone,create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
+			array('deposit,telephone', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>128),
 			array('description,telephone,deposit,create_time, update_time', 'safe'),
 			
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description,deposit,telephone,create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
+			array('id, name, description,deposit,telephone,create_time,update_time', 'safe', 'on'=>'search'),
 		    array('name', 'required'),
 		    
 		);
@@ -83,9 +83,9 @@ class Project extends TrackStarActiveRecord
 			'consumptions'=>'消费总额',
 			'balance'=>'余额',
 			'create_time' => '创建时间',
-			'create_user_id' => '创建用户',
+
 			'update_time' => '更新时间',
-			'update_user_id' => '更新用户',
+
 		);
 	}
 
@@ -106,9 +106,9 @@ class Project extends TrackStarActiveRecord
 		$criteria->compare('telephone',$this->telephone,true);
 		$criteria->compare('deposit',$this->deposit,true);
 		$criteria->compare('create_time',$this->create_time,true);
-		$criteria->compare('create_user_id',$this->create_user_id);
+
 		$criteria->compare('update_time',$this->update_time,true);
-		$criteria->compare('update_user_id',$this->update_user_id);
+	
 		
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,

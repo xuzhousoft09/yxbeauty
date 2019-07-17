@@ -40,8 +40,6 @@ if(Yii::app()->user->checkAccess('updateProject',array('project'=>$model)))
 
 <h1>客户</h1>
 <?php foreach($model->caculateTheConsumptions($model->id)[0] as $c)?>
-<?php foreach($model->getUserText($model->update_user_id)[0] as $updater)?>
-<?php foreach($model->getUserText($model->create_user_id)[0] as $creater)?>
 <?php $d = $model->deposit; $b = $d - $c;?>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -62,17 +60,9 @@ if(Yii::app()->user->checkAccess('updateProject',array('project'=>$model)))
 			),
 		'description',
 		'create_time',
-		array(
-					'name'=>'创建用户',
-					'value'=>CHtml::encode($creater),
-					'type'=>'raw',
-			),
+	
 		'update_time',
-		array(
-					'name'=>'更新用户',
-					'value'=>CHtml::encode($updater),
-					'type'=>'raw',
-			),
+
 	),
 	
 		

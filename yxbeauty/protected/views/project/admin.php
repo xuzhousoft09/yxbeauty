@@ -56,19 +56,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		'description',
 		
 	/* 	'create_user_id',  */
-			array(         
-					'name'=>'create_user_id',
-					'value'=>'implode($data->getUserText($data->create_user_id)[0])',
-					
-			),
+		
 	
 			'create_time',
 		 /* 'update_user_id', */ 
-			array(
-					'name'=>'update_user_id',
-					'value'=>'implode($data->getUserText($data->update_user_id)[0])',
-						
-			),
+	
 		
 			'update_time',
 		array(
