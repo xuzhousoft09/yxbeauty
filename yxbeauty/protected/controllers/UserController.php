@@ -65,7 +65,7 @@ class UserController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new User;
+		$model = new User;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -83,12 +83,17 @@ class UserController extends Controller
 				
 				$file->saveAs('assets/uploads/user/' . $newimg); 
 				$model->url = 'assets/uploads/user/' . $newimg;
-				
+			   
+				$hostInfo = Yii::app()->request->hostInfo;
+				$baseUrl = Yii::app()->request->baseUrl;
+				$file_path = $hostInfo.$baseUrl.'/'."$model->url"; 
+				$model->file_path = $file_path;
 			}
 			$model->addtime = time();
 			
+		
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id, 'url'=>"$model->url"));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -103,13 +108,31 @@ class UserController extends Controller
 	 * @param integer $id the ID of the model to be updated
 	 */
 	public function actionUpdate($id)
-	{
+	{   
 		$model=$this->loadModel($id);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
+			
+			$file=CUploadedFile::getInstance($model,'url');
+				
+				
+			if ($file) {
+				$newimg = 'url_' . time() . '_' . rand(1, 9999) . '.' . $file->extensionName;
+			
+				$file->saveAs('assets/uploads/user/' . $newimg);
+				$model->url = 'assets/uploads/user/' . $newimg;
+			
+				$hostInfo = Yii::app()->request->hostInfo;
+				$baseUrl = Yii::app()->request->baseUrl;
+				$file_path = $hostInfo.$baseUrl.'/'."$model->url";
+				$model->file_path = $file_path;
+			}
+			$model->addtime = time();
+			
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

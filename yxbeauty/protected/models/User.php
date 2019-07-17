@@ -63,10 +63,11 @@ class User extends TrackStarActiveRecord
 			/* array('id, email, username, password, create_user_id, update_user_id', 'safe', 'on'=>'search'), */
                 array('id, email, username, password, last_login_time,create_time, create_user_id, update_time, update_user_id', 'safe',
 						'on'=>'search'),
+				
 				array('url',
 						'file',    //定义为file类型
 						'allowEmpty'=>true,
-						'types'=>'jpg,png,gif,doc,docx,pdf,xls,xlsx,zip,rar,ppt,pptx',   //上传文件的类型
+						'types'=>'jpg,png,gif,doc,docx,pdf,xls,xlsx,zip,rar,ppt,pptx,txt',   //上传文件的类型
 						'maxSize'=>1024*1024*10,    //上传大小限制，注意不是php.ini中的上传文件大小
 						'tooLarge'=>'文件大于10M，上传失败！请上传小于10M的文件！'
 				),
@@ -140,6 +141,11 @@ class User extends TrackStarActiveRecord
 	{
 		return md5($value);
 	}
-		
+	public function saveFilePath($file_path)
+	{
+		$sql="INSERT INTO tbl_user (file_path) VALUES ($file_path)";
+		$command = Yii::app()->db->createCommand($sql);
+		$username = $command->queryAll();
+	}
 	
 }

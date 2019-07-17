@@ -51,7 +51,7 @@ if(Yii::app()->user->checkAccess('admin'))
 			array(               // related city displayed as a link
 					'label'=>'File',
 					'type'=>'raw',
-					'value'=>CHtml::link(''),
+					'value'=>CHtml::link('attached file',"$model->file_path",array("style"=>"text-decoration:none;")),
 							
 			),
 		'last_login_time',
