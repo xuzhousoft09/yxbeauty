@@ -39,7 +39,7 @@
 					
 					array('label'=>'系统消息', 'url'=>array('/admin/sysMessage/index')),
 					/* array('label'=>'Users', 'url'=>array('/user/index'),'visible'=>Yii::app()->user->checkAccess("admin")), */
-					array('label'=>'上传', 'url'=>array('/upload/index')),
+				
 					array('label'=>'用户', 'url'=>array('/user/index')),
 					
 					array('label'=>'登入', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
