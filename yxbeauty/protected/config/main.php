@@ -5,7 +5,12 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 return array(
+		
+		'theme'=>'bootstrap',
+	
+		
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'艺瑄美社客户管理系统软件',
 
@@ -35,6 +40,9 @@ return array(
       ), */
 	// application components
 	'components'=>array(
+			'bootstrap'=>array(
+					'class'=>'bootstrap.components.Bootstrap',
+			),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -102,5 +110,8 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
-    
+		
+		
+		
+	
 );
