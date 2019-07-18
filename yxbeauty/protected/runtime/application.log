@@ -1026,3 +1026,8 @@ Stack trace:
 2019/07/18 08:46:29 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=12
 2019/07/18 08:51:28 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
 2019/07/18 08:51:31 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=2
+2019/07/18 08:57:19 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:57:22 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:57:47 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 09:13:46 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 09:13:55 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
