@@ -539,3 +539,490 @@ Stack trace:
 #16 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
 #17 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
 #18 {main} REQUEST_URI=/yxbeauty/index.php?r=project/index
+2019/07/18 06:21:24 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (150)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/18 06:21:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 06:21:55 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (150)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/18 06:21:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 06:22:38 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (150)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/18 06:22:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 06:23:31 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (150)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/18 06:23:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 07:02:16 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (150)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/18 07:02:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 07:02:22 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (150)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/18 07:02:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 07:10:06 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 07:10:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 07:10:16 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 07:10:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 07:43:34 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 07:43:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 07:53:20 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 07:53:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 07:54:34 [error] [php] Use of undefined constant tesstttttttttttttttttttttttttt - assumed 'tesstttttttttttttttttttttttttt' (E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php:148)
+Stack trace:
+#0 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#1 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#2 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\projects\yxbeauty\framework\web\CController.php(1084): CAccessControlFilter->filter()
+#4 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): ProjectController->filterAccessControl()
+#5 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#7 E:\projects\yxbeauty\framework\web\CController.php(257): ProjectController->runActionWithFilters()
+#8 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): ProjectController->run()
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#10 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#11 E:\projects\yxbeauty\yxbeauty\index.php(13): CWebApplication->run()
+REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:00:20 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:00:25 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:00:28 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:00:32 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:01:22 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:01:25 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:02:37 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:02:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:03:10 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:03:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(150): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:04:34 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:04:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(151): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:12:12 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:12:16 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:13:26 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:17:26 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:17:26 [error] [php] Undefined property: CDbException::$getMessage (E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php:155)
+Stack trace:
+#0 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#1 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#2 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\projects\yxbeauty\framework\web\CController.php(1084): CAccessControlFilter->filter()
+#4 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): ProjectController->filterAccessControl()
+#5 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#7 E:\projects\yxbeauty\framework\web\CController.php(257): ProjectController->runActionWithFilters()
+#8 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): ProjectController->run()
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#10 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#11 E:\projects\yxbeauty\yxbeauty\index.php(13): CWebApplication->run()
+REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:19:08 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:19:11 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:19:16 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:20:35 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:20:38 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:21:28 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:21:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(151): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:21:38 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:21:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(151): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:21:54 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:21:57 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:24:58 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:25:02 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:30:59 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:33:38 [error] [php] Use of undefined constant tesstttttttttttttttttttttttttt - assumed 'tesstttttttttttttttttttttttttt' (E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php:146)
+Stack trace:
+#0 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#1 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#2 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\projects\yxbeauty\framework\web\CController.php(1084): CAccessControlFilter->filter()
+#4 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): ProjectController->filterAccessControl()
+#5 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#7 E:\projects\yxbeauty\framework\web\CController.php(257): ProjectController->runActionWithFilters()
+#8 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): ProjectController->run()
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#10 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#11 E:\projects\yxbeauty\yxbeauty\index.php(13): CWebApplication->run()
+REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:34:03 [error] [php] Use of undefined constant tesssssssssssst - assumed 'tesssssssssssst' (E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php:146)
+Stack trace:
+#0 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#1 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#2 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\projects\yxbeauty\framework\web\CController.php(1084): CAccessControlFilter->filter()
+#4 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): ProjectController->filterAccessControl()
+#5 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#7 E:\projects\yxbeauty\framework\web\CController.php(257): ProjectController->runActionWithFilters()
+#8 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): ProjectController->run()
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#10 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#11 E:\projects\yxbeauty\yxbeauty\index.php(13): CWebApplication->run()
+REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:34:07 [error] [php] Use of undefined constant tesssssssssssst - assumed 'tesssssssssssst' (E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php:146)
+Stack trace:
+#0 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#1 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#2 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\projects\yxbeauty\framework\web\CController.php(1084): CAccessControlFilter->filter()
+#4 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): ProjectController->filterAccessControl()
+#5 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#7 E:\projects\yxbeauty\framework\web\CController.php(257): ProjectController->runActionWithFilters()
+#8 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): ProjectController->run()
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#10 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#11 E:\projects\yxbeauty\yxbeauty\index.php(13): CWebApplication->run()
+REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:34:22 [error] [php] Use of undefined constant tesssssssssssst - assumed 'tesssssssssssst' (E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php:149)
+Stack trace:
+#0 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#1 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#2 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 E:\projects\yxbeauty\framework\web\CController.php(1084): CAccessControlFilter->filter()
+#4 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): ProjectController->filterAccessControl()
+#5 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#7 E:\projects\yxbeauty\framework\web\CController.php(257): ProjectController->runActionWithFilters()
+#8 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): ProjectController->run()
+#9 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#10 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#11 E:\projects\yxbeauty\yxbeauty\index.php(13): CWebApplication->run()
+REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:34:40 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:42:59 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:42:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(151): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:45:42 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:45:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`yxbeauty`.`tbl_project_user_role`, CONSTRAINT `tbl_project_user_role_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `tbl_project` (`id`))' in E:\projects\yxbeauty\framework\db\CDbCommand.php:256
+Stack trace:
+#0 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1650): CDbCommand->execute()
+#1 E:\projects\yxbeauty\framework\db\ar\CActiveRecord.php(1116): CActiveRecord->deleteByPk('1')
+#2 E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php(151): CActiveRecord->delete()
+#3 [internal function]: ProjectController->actionDelete('1')
+#4 E:\projects\yxbeauty\framework\web\actions\CInlineAction.php(54): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#5 E:\projects\yxbeauty\framework\web\CController.php(300): CInlineAction->run()
+#6 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 E:\projects\yxbeauty\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 E:\projects\yxbeauty\framework\web\CController.php(1084): CFilter->filter(Object(CFilterChain))
+#9 E:\projects\yxbeauty\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 E:\projects\yxbeauty\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 E:\projects\yxbeauty\framework\web\CController.php(283): CFilterChain->run()
+#12 E:\projects\yxbeauty\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\projects\yxbeauty\framework\web\CWebApplication.php(324): CController->run('delete')
+#14 E:\projects\yxbeauty\framework\web\CWebApplication.php(121): CWebApplication->runController('project/delete')
+#15 E:\projects\yxbeauty\framework\base\CApplication.php(135): CWebApplication->processRequest()
+#16 E:\projects\yxbeauty\yxbeauty\index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/yxbeauty/index.php?r=project%2Fdelete&id=1&ajax=project-grid
+2019/07/18 08:45:58 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:46:18 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:46:22 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=15
+2019/07/18 08:46:26 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=12
+2019/07/18 08:46:29 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=12
+2019/07/18 08:51:28 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+2019/07/18 08:51:31 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=2
