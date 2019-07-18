@@ -47,11 +47,11 @@ if(Yii::app()->user->checkAccess('updateIssue',$params))
 			
 } */
 
-if(Yii::app()->user->checkAccess('admin'))
+/* if(Yii::app()->user->checkAccess('admin'))
 {
 	$this->menu[] = array('label'=>'管理交易',
 			'url'=>array('admin', 'pid'=>$model->project->id));
-}  
+}   */
 				
 ?>
 
