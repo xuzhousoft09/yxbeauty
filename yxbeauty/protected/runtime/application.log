@@ -1037,3 +1037,15 @@ in E:\projects\yxbeauty\yxbeauty\index.php (13)
 2019/07/18 09:32:45 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
 in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (151)
 in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/19 08:24:06 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (151)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/19 08:24:09 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (151)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/19 08:25:10 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (151)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
+2019/07/19 08:27:36 [error] [system.db.CDbCommand] Error in executing SQL: DELETE FROM `tbl_project` WHERE `tbl_project`.`id`=1
+in E:\projects\yxbeauty\yxbeauty\protected\controllers\ProjectController.php (151)
+in E:\projects\yxbeauty\yxbeauty\index.php (13)
